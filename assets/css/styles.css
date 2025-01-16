@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-image: url('../../assets/images/space-bg2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+    }
+}
