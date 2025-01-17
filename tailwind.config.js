@@ -6,7 +6,11 @@ module.exports = {
     "./assets/**/*.css", //All CSS files
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
