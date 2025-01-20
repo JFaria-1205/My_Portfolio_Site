@@ -12,7 +12,7 @@ const siteHeader = `
             </nav>
         </div>
         <div class="text-white font-thin text-2xl text-right z-0">
-            <a href="index.html" class="hover:text-yellow-200">Jason Faria Portfolio</a>
+            <a href="index.html" class="hover:text-yellow-200">Jason Faria | Portfolio</a>
         </div>        
     </header>
 `;

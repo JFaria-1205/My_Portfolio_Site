@@ -1,19 +1,8 @@
-/*@keyframes panBackground {
-    0% {
-        background-position: 20% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}*/
-
 body {
     background-image: url('../../assets/images/space-bg3.png');
     background-size: cover;
     background-repeat: repeat;
-    /*animation: panBackground 30s linear infinite;
-    height: 100vh;
-    margin: 0;*/
+    /*background-attachment: fixed;*/
 
     color: white;
 }
