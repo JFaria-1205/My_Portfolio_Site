@@ -8,3 +8,8 @@ body {
     color: white;
     font-family: 'Outfit', sans-serif;
 }
+
+header{
+    padding: 10px;
+    background-color: rgb(34, 34, 34);
+}
