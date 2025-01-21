@@ -1,5 +1,42 @@
-body {
-    background-image: url('../../assets/images/space-bg3.png');
+/*  TEST ELEMENTS - DELETE LATER */
+#test{
+    background-color: rgb(12, 12, 12);
+    border: 10px solid rgb(72, 30, 20);
+    padding: 1em;
+}
+
+#palette-link{
+    color:aqua
+}
+
+#color-1 span{
+    color: rgb(242, 97, 63);
+    background-color: rgb(242, 97, 63);
+}
+#color-2 span{
+    color: rgb(155, 57, 34);
+    background-color: rgb(155, 57, 34);
+}
+#color-3 span{
+    color: rgb(72, 30, 20);
+    background-color: rgb(72, 30, 20);
+}
+/*  END TEST */
+
+header{
+    padding: 10px;
+    background-color: rgb(155, 57, 34);
+}
+
+.link-hover:hover{
+    color: rgb(255, 125, 96);
+    padding: 0.5em;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+body{
+    background-image: url('../../assets/images/space-bg.png');
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -9,7 +46,22 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-header{
-    padding: 10px;
-    background-color: rgb(34, 34, 34);
+div{
+    max-width: 800px;
+    justify-self: center;
+    margin: 2em;
+}
+
+#nav-extra{
+    color: rgb(255, 150, 127);
+}
+
+#home-profile-pic{
+    width: 20em;
+    justify-self: center;
+    border-radius: 5em;
+}
+
+#text span{
+    background-color: rgba(12, 12, 12, 0.75);
 }

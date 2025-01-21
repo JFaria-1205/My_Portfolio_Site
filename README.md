@@ -5,9 +5,10 @@ Hello! If you are reading this, then you are checking out my Portfolio's backend
 
 https://MySite.com
 
-**Technologies and tools I used:
+**Technologies/Tools/Languages used:
 - Github
 - Html
 - CSS (Tailwind)
 - JavaScript
 - VSCode
+- Krita

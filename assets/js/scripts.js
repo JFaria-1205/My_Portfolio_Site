@@ -19,23 +19,28 @@ function updateNavCurrentPage() {
 
     switch (window.location.pathname) {
         case "/index.html":
-            homeLink.style.textDecoration = "underline";
+            homeLink.style.fontWeight = "bold";
+            homeLink.style.color = "rgb(242, 97, 63)";
             break;
         
         case "/projects.html":
-            projectsLink.style.textDecoration = "underline";
+            projectsLink.style.fontWeight = "bold";
+            projectsLink.style.color = "rgb(242, 97, 63)";
             break;
 
         case "/about.html":
-            aboutLink.style.textDecoration = "underline";
+            aboutLink.style.fontWeight = "bold";
+            aboutLink.style.color = "rgb(242, 97, 63)";
             break;
 
         case "/contact.html":
-            contactLink.style.textDecoration = "underline";
+            contactLink.style.fontWeight = "bold";
+            contactLink.style.color = "rgb(242, 97, 63)";
             break;   
         
         default:
-            homeLink.style.textDecoration = "underline";
+            homeLink.style.fontWeight = "bold";
+            homeLink.style.color = "rgb(242, 97, 63)";
             console.error("updateNavCurrentPage(scripts.js): no html found; using default");
             break;
     }
