@@ -1,41 +1,54 @@
 /*  TEST ELEMENTS - DELETE LATER */
-#test{
+#test {
     background-color: rgb(12, 12, 12);
     border: 10px solid rgb(72, 30, 20);
     padding: 1em;
 }
 
-#palette-link{
-    color:aqua
+#palette-link {
+    color:wheat
 }
 
-#color-1 span{
+#color-1 span {
     color: rgb(242, 97, 63);
     background-color: rgb(242, 97, 63);
 }
-#color-2 span{
+#color-2 span {
     color: rgb(155, 57, 34);
     background-color: rgb(155, 57, 34);
 }
-#color-3 span{
+#color-3 span {
     color: rgb(72, 30, 20);
     background-color: rgb(72, 30, 20);
 }
+#color-4 span {
+    color: wheat;
+    background-color: wheat;
+}
 /*  END TEST */
 
-header{
+header {
     padding: 10px;
     background-color: rgb(155, 57, 34);
+    position: sticky;
+    top: 0;
 }
 
-.link-hover:hover{
+.link-hover:hover {
     color: rgb(255, 125, 96);
     padding: 0.5em;
     background-color: wheat;
     border-radius: 10px;
 }
 
-body{
+.link-hover-menu:hover {
+    color: rgb(255, 125, 96);
+    padding: 0.2em;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+body {
     background-image: url('../../assets/images/space-bg.png');
     background-size: cover;
     background-repeat: repeat;
@@ -46,22 +59,39 @@ body{
     font-family: 'Outfit', sans-serif;
 }
 
-div{
+div {
     max-width: 800px;
     justify-self: center;
     margin: 2em;
 }
 
-#nav-extra{
+#nav-extra {
     color: rgb(255, 150, 127);
 }
 
-#home-profile-pic{
+#home-profile-pic {
     width: 20em;
     justify-self: center;
     border-radius: 5em;
 }
 
-#text span{
+#text span {
     background-color: rgba(12, 12, 12, 0.75);
+}
+
+#head-menu {
+    justify-self: center;
+    text-align: center;
+}
+
+#nav-menu-pic {
+    width: 2em;
+    border-radius: 10px;
+    justify-self: center;
+}
+#dropdown-content {
+    padding-top: 0.5em;
+}
+#dropdown-content li{
+    padding: 0.25em;
 }
