@@ -65,6 +65,10 @@ div {
     margin: 2em;
 }
 
+#intro {
+    margin-top: 5em;
+}
+
 #nav-extra {
     color: rgb(255, 150, 127);
 }
