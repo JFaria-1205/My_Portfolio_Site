@@ -3,13 +3,28 @@
 //#endregion
 
 //#region Event-Listeners
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
     const scrollY = window.scrollY; // Get the vertical scroll position
     const scrollSpeed = 0.3;
     const backgroundOffset = scrollY * scrollSpeed;
 
     // Apply the offset
     document.body.style.backgroundPosition = `center -${backgroundOffset}px`;
+});
+
+document.addEventListener("scroll", () => {
+    const glowIndicator = document.querySelector(".glow-indicator");
+    const footer = document.querySelector(".footer");
+
+    const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+    if (atBottom) {
+        glowIndicator.style.display = "none";
+        footer.style.display = "block";
+    } else {
+        glowIndicator.style.display = "block";
+        footer.style.display = "none";
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
