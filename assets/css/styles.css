@@ -82,11 +82,34 @@ h2 {
 div {
     max-width: 800px;
     justify-self: center;
-    margin: 2em;
 }
 
 #hero-section {
-    margin-top: 4em;
+    height: 100vh;
+}
+.hero-top,
+.hero-middle,
+.hero-bottom {
+}
+
+.hero-top {
+    top: 0;
+}
+.hero-middle {
+    top: 50%;
+}
+.hero-bottom {
+    bottom: 0;
+}
+
+.skills-section {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+.skills-section div{
+    height: 2.5em;
+    align-items: center;
 }
 
 #nav-extra {
@@ -94,12 +117,12 @@ div {
 }
 
 #home-profile-pic {
-    width: 20em;
+    width: 12.5em;
     justify-self: center;
-    border-radius: 5em;
+    border-radius: 4em;
 }
 
-#text span {
+.text span {
     background-color: rgba(12, 12, 12, 0.75);
 }
 
