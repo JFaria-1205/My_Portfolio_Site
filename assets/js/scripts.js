@@ -57,6 +57,7 @@ window.addEventListener("resize", function() {
 function updateNavCurrentPage() {
     let homeLinks = document.getElementsByClassName("nav_home_link");
     let projectsLinks = document.getElementsByClassName("nav_projects_link");
+    let resumeLinks = document.getElementsByClassName("nav_resume_link");    
     let aboutLinks = document.getElementsByClassName("nav_about_link");
     let contactLinks = document.getElementsByClassName("nav_contact_link");
 
@@ -70,6 +71,13 @@ function updateNavCurrentPage() {
         
         case "/projects.html":
             for (let element of projectsLinks) {
+                element.style.fontWeight = "bold";
+                element.style.color = "rgb(242, 97, 63)";
+            }
+            break;
+
+        case "/resume.html":
+            for (let element of resumeLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "rgb(242, 97, 63)";
             }
@@ -100,41 +108,41 @@ function updateNavCurrentPage() {
 }
 
 function handleResize() {
-    const elementsToHideOn800 = document.getElementsByClassName("hide-on-800");
-    const elementsToHideOn530 = document.getElementsByClassName("hide-on-530");
-    const elementsToShowOn530 = document.getElementsByClassName("show-on-530");
+    const elementsToHideOnMedium = document.getElementsByClassName("hide-on-medium");
+    const elementsToHideOnSmall = document.getElementsByClassName("hide-on-small");
+    const elementsToShowOnSmall = document.getElementsByClassName("show-on-small");
     const headerElement = document.getElementById("head");
 
     if (window.innerWidth <= 530) {
-        for (let element of elementsToHideOn800) {
+        for (let element of elementsToHideOnMedium) {
             element.style.display = "none";
         }
-        for (let element of elementsToHideOn530) {
+        for (let element of elementsToHideOnSmall) {
             element.style.display = "none";
         }
-        for (let element of elementsToShowOn530) {
+        for (let element of elementsToShowOnSmall) {
             element.style.display = "block";
         }
         headerElement.className = "sticky grid grid-cols-1 items-center";
     } else if (window.innerWidth < 800) {
-        for (let element of elementsToHideOn800) {
+        for (let element of elementsToHideOnMedium) {
             element.style.display = "none";
         }
-        for (let element of elementsToHideOn530) {
+        for (let element of elementsToHideOnSmall) {
             element.style.display = "block";
         }
-        for (let element of elementsToShowOn530) {
+        for (let element of elementsToShowOnSmall) {
             element.style.display = "none";
         }
         headerElement.className = "sticky grid grid-cols-1 items-center";
     } else {
-        for (let element of elementsToHideOn800) {
+        for (let element of elementsToHideOnMedium) {
             element.style.display = "block";
         }
-        for (let element of elementsToHideOn530) {
+        for (let element of elementsToHideOnSmall) {
             element.style.display = "block";
         }
-        for (let element of elementsToShowOn530) {
+        for (let element of elementsToShowOnSmall) {
             element.style.display = "none";
         }
         headerElement.className = "sticky grid grid-cols-3 items-center";

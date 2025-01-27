@@ -1,0 +1,17 @@
+maybe effects:
+scroll effect, items glow, stretch upward, 
+
+
+homepage:
+
+*hero section*/*featured section* (mobile is stacked)
+
+*About me (Short intro) section*
+
+*skills & tools section*
+
+*Call-to-Action Section*
+"Let's Build Something Amazing Together!"
+"Explore My Portfolio to See What I Can Do."
+"View My Projects" or "Hire Me."
+
