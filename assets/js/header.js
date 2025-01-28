@@ -17,9 +17,9 @@ if (typeof siteHeader ==="undefined"){
             
             <a id="nav-extra" class="hide-on-medium font-thin text-lg text-right z-0" href="index.html">Portfolio</a>
 
-            <ul id="head-menu" class="show-on-small font-thin text-xl z-10 items-center">
+            <ul id="header-small-menu" class="show-on-small font-thin text-xl z-10 items-center">
                 <li id="dropdown-button" class="link-hover-menu">
-                    <img id="nav-menu-pic" src="assets/images/nav-menu-button.png">
+                    <img id="small-nav-menu-pic" src="assets/images/nav-menu-button.png">
                 </li>
                 <ul id="dropdown-content" style="display: none;">
                     <li><a href="index.html" class="nav_home_link link-hover-menu">Home</a></li>

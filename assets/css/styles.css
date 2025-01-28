@@ -4,11 +4,9 @@
     border: 10px solid rgb(72, 30, 20);
     padding: 1em;
 }
-
 #palette-link {
     color:wheat
 }
-
 #color-1 span {
     color: rgb(242, 97, 63);
     background-color: rgb(242, 97, 63);
@@ -27,27 +25,40 @@
 }
 /*  END TEST */
 
+/* Site Header */
 header {
     padding: 10px;
     background-color: rgb(155, 57, 34);
     position: sticky;
     top: 0;
 }
-
+#nav-extra {color: rgb(255, 150, 127);}
 .link-hover:hover {
     color: rgb(12, 12, 12);
     padding: 0.5em;
     background-color: wheat;
     border-radius: 10px;
 }
-
 .link-hover-menu:hover {
     color: rgb(12, 12, 12);
     padding: 0.2em;
     background-color: wheat;
     border-radius: 10px;
 }
+#header-small-menu {
+    justify-self: center;
+    text-align: center;
+}
+#small-nav-menu-pic {
+    width: 2em;
+    border-radius: 10px;
+    justify-self: center;
+}
+#dropdown-content {padding-top: 0.5em;}
+#dropdown-content li {padding: 0.25em;}
+/* End Site Header */
 
+/* Misc Setup */
 body {
     background-image: url('../../assets/images/space-bg.png');
     background-size: cover;
@@ -58,87 +69,30 @@ body {
     color: white;
     font-family: 'Outfit', sans-serif;
 }
-
 p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-weight: 300;
 }
-
 h1 {
     font-size: 1.875rem;
     line-height: 2.25rem;
     text-align: center;
     font-weight: 500;
 }
-
 h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;   
     font-weight: 400;
 }
-
 div {
     max-width: 800px;
     justify-self: center;
 }
-
-#hero-section {
-    height: 100vh;
-}
-
-.hero-top {
-    align-self: flex-end;
-}
-.hero-middle {
-    align-self: center;
-}
-.hero-bottom {
-    align-self:flex-start;
-}
-
-.skills-section {
-    max-width: 400px;
-    width: 100%;
-    position: relative;
-}
-.skills-section div{
-    height: 2.5em;
-    align-items: center;
-}
-
-#nav-extra {
-    color: rgb(255, 150, 127);
-}
-
-#home-profile-pic {
-    width: 12.5em;
-    justify-self: center;
-    border-radius: 4em;
-}
-
-.text span {
+.text span { /* Make text more readable: Add class=text and span around text*/
     background-color: rgba(12, 12, 12, 0.75);
-}
-
-#head-menu {
-    justify-self: center;
-    text-align: center;
-}
-
-#nav-menu-pic {
-    width: 2em;
-    border-radius: 10px;
-    justify-self: center;
-}
-#dropdown-content {
-    padding-top: 0.5em;
-}
-#dropdown-content li {
-    padding: 0.25em;
-}
-
+} 
 .glow-indicator {
     position: fixed;
     bottom: -10px;
@@ -153,19 +107,66 @@ div {
     z-index: 1000;
     margin: 0;
 }
-
 @keyframes pulsate {
-    0% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.4;
-    }
+    0% {opacity: 0.4;}
+    50% {opacity: 1;}
+    100% {opacity: 0.4;}
 }
+/* End Misc */
 
+/* Intro Section */
+#intro-wide {
+    height: 100vh;
+}
+.welcome-text {
+    margin-top: 2em;
+}
+#hero-section {
+    height: 100vh;
+}
+.hero-top {
+    height: 200px;
+    align-self: center;
+    align-content: center;
+}
+.hero-bottom {
+    height: 200px;
+    align-self: flex-start;
+    align-content: center;
+}
+.intro-skills-section {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+.intro-skills-section div {
+    height: 3.5em;
+    align-items: center;
+}
+#home-profile-pic {
+    width: 12.5em;
+    justify-self: center;
+    border-radius: 4em;
+}
+/* End Intro Section */
+
+/* Featured Section */
+#featured-section {
+    height: 100vh;
+}
+.featured-top {
+    height: 50px;
+    align-self: center;
+    align-content: center;
+}
+.featured-bottom {
+    height: 400px;
+    align-self: flex-start;
+    align-content: center;
+}
+/* End Featured Section */
+
+/* Site Footer */
 footer {
     display: none; /* Default hidden */
     padding: 20px;
@@ -176,3 +177,4 @@ footer {
     font-weight: 300;
     text-align: center;
 }
+/* End Footer */
