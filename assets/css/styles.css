@@ -4,9 +4,6 @@
     border: 10px solid rgb(72, 30, 20);
     padding: 1em;
 }
-#palette-link {
-    color:wheat
-}
 #color-1 span {
     color: rgb(242, 97, 63);
     background-color: rgb(242, 97, 63);
@@ -33,17 +30,19 @@ header {
     top: 0;
 }
 #nav-extra {color: rgb(255, 150, 127);}
-.link-hover:hover {
+.nav-link:hover {
     color: rgb(12, 12, 12);
     padding: 0.5em;
     background-color: wheat;
     border-radius: 10px;
+    font-weight: 400;
 }
-.link-hover-menu:hover {
+.nav-link-mini-menu:hover {
     color: rgb(12, 12, 12);
     padding: 0.2em;
     background-color: wheat;
     border-radius: 10px;
+    font-weight: 400;
 }
 #header-small-menu {
     justify-self: center;
@@ -72,26 +71,35 @@ body {
 p {
     font-size: 1.25rem;
     line-height: 1.75rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 h1 {
     font-size: 1.875rem;
     line-height: 2.25rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 150;
+    color: wheat;
 }
 h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;   
+    font-weight: 200;
+}
+a:not(.nav-link, .nav-link-mini-menu, #nav-extra) {
+    color: rgb(242, 97, 63);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     font-weight: 400;
 }
+a:hover:not(.nav-link, .nav-link-mini-menu, #nav-extra) {
+    text-decoration:underline;
+}
 div {
-    max-width: 800px;
     justify-self: center;
 }
 .text span { /* Make text more readable: Add class=text and span around text*/
-    background-color: rgba(12, 12, 12, 0.75);
+    background-color: rgba(12, 12, 12, 0.8);
 } 
 .glow-indicator {
     position: fixed;
@@ -114,57 +122,55 @@ div {
 }
 /* End Misc */
 
-/* Intro Section */
-#intro-wide {
+/* Hero Section */
+#hero-section {
+    width: 100%;
     height: 100vh;
 }
 .welcome-text {
-    margin-top: 2em;
+    padding-top: 2em;
+    font-size: 2.25em;
+    line-height: 2.75rem;
+    margin-bottom: 1em;
 }
-#hero-section {
-    height: 100vh;
+#intro-sub-hero-section {
+    width: 50%;
+    float: left;
+    padding: 2em;
 }
-.hero-top {
-    height: 200px;
-    align-self: center;
-    align-content: center;
+#featured-sub-hero-section {
+    width: 50%;
+    float: right;
+    padding: 2em;
 }
-.hero-bottom {
-    height: 200px;
-    align-self: flex-start;
-    align-content: center;
+@media only screen and (max-width: 1150px) {
+    #hero-section {
+        height: 200vh;
+    }
+    #intro-sub-hero-section, #featured-sub-hero-section {
+        display: block;
+        float: none;
+        width: 100%;
+        height: 100vh;
+    }
 }
-.intro-skills-section {
-    max-width: 400px;
-    width: 100%;
-    position: relative;
-}
-.intro-skills-section div {
-    height: 3.5em;
-    align-items: center;
-}
-#home-profile-pic {
+#intro-profile-pic {
     width: 12.5em;
     justify-self: center;
-    border-radius: 4em;
+    border-radius: 3em;
+}
+#intro-top {
+    width: 100%;
+}
+#intro-bottom {
+    max-width: 450px;
+    width: 100%; 
+}
+#intro-bottom img {
+    height: 3em;
+    display: inline;
 }
 /* End Intro Section */
-
-/* Featured Section */
-#featured-section {
-    height: 100vh;
-}
-.featured-top {
-    height: 50px;
-    align-self: center;
-    align-content: center;
-}
-.featured-bottom {
-    height: 400px;
-    align-self: flex-start;
-    align-content: center;
-}
-/* End Featured Section */
 
 /* Site Footer */
 footer {
@@ -174,7 +180,9 @@ footer {
     color: white;
     font-size: 1rem;
     line-height: 1.5rem;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
+    margin: 0;
+    border: 0;
 }
 /* End Footer */

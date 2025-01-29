@@ -6,6 +6,12 @@ homepage:
 
 *hero section*/*featured section* (mobile is stacked)
 
+featured section has:
+Project 1: Django Website
+Project 2: Lets Chill Homemade Ice Cream Website
+Project 3: Tetris Clone - programmed and developed using C# & Unity
+Project 4: Sluggerpunk
+
 *About me (Short intro) section*
 
 *skills & tools section*
@@ -14,4 +20,36 @@ homepage:
 "Let's Build Something Amazing Together!"
 "Explore My Portfolio to See What I Can Do."
 "View My Projects" or "Hire Me."
+
+
+**Portfolio Page**
+
+Projects:
+1 - Django Project
+2 - Lets Chill Homemade Ice Cream Website
+    link: https://letschillicecream.com/
+3 - Realtor Team Pro Website
+    link: https://realtorteampro.com/
+4 - My Portfolio Site!
+
+Game Projects:
+1 - Sluggerpunk - wider scope, larger team
+2 - Tetris Clone - programming milestone, Tetris!
+3 - Ring Force - endless procedurally generated levels, WIP
+4 - Damned - 24-hour game jam project
+
+
+Older / Smaller Projects
+
+(these projects are either a lot older or way smaller in scale,
+however are still projects that I am proud of as they've shaped
+my journey to where I am now.)
+
+1 - Simple Website
+    link: https://jfaria-1205.github.io/IS601_Assignment2/
+2 - Earth Bending Simulator - AI showcase
+3 - VFX Tunnel - Visual Design
+4 - The Bunker - Level Design
+5 - Level Mechanics Showcase - Mechanic Design
+
 
