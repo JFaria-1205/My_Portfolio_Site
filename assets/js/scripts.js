@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownButton = document.getElementById("dropdown-button");
     const dropdownContent = document.getElementById("dropdown-content");
     
-    updateNavCurrentPage();
-    handleResize();    
+    updateNavCurrentPage();  
 
     dropdownButton.addEventListener("click", () => {
         dropdownContent.style.display =
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("resize", function() {
-    handleResize();
     updateNavCurrentPage();
 });
 //#endregion
@@ -104,48 +102,6 @@ function updateNavCurrentPage() {
             }
             console.error("updateNavCurrentPage(scripts.js): no html found; using default");
             break;
-    }
-}
-
-function handleResize() {
-    const elementsToHideOnMedium = document.getElementsByClassName("hide-on-medium");
-    const elementsToHideOnSmall = document.getElementsByClassName("hide-on-small");
-    const elementsToShowOnSmall = document.getElementsByClassName("show-on-small");
-    const headerElement = document.getElementById("head");
-
-    if (window.innerWidth <= 530) {
-        for (let element of elementsToHideOnMedium) {
-            element.style.display = "none";
-        }
-        for (let element of elementsToHideOnSmall) {
-            element.style.display = "none";
-        }
-        for (let element of elementsToShowOnSmall) {
-            element.style.display = "block";
-        }
-        headerElement.className = "sticky grid grid-cols-1 items-center";
-    } else if (window.innerWidth < 800) {
-        for (let element of elementsToHideOnMedium) {
-            element.style.display = "none";
-        }
-        for (let element of elementsToHideOnSmall) {
-            element.style.display = "block";
-        }
-        for (let element of elementsToShowOnSmall) {
-            element.style.display = "none";
-        }
-        headerElement.className = "sticky grid grid-cols-1 items-center";
-    } else {
-        for (let element of elementsToHideOnMedium) {
-            element.style.display = "block";
-        }
-        for (let element of elementsToHideOnSmall) {
-            element.style.display = "block";
-        }
-        for (let element of elementsToShowOnSmall) {
-            element.style.display = "none";
-        }
-        headerElement.className = "sticky grid grid-cols-3 items-center";
     }
 }
 //#endregion
