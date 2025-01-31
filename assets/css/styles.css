@@ -64,7 +64,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     margin: 0;
-
+    display: grid;
     color: white;
     font-family: 'Outfit', sans-serif;
 }
