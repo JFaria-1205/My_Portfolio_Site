@@ -26,7 +26,7 @@
 
 /* Site Header */
 header {
-    padding: 1em; /* Media Query */
+    padding: 0.5em; /* Media Query */
     background-color: rgb(155, 57, 34);
     position: sticky;
     top: 0;
@@ -40,7 +40,10 @@ header {
 #nav-page-links a {
     margin-left: 0.5em;
     margin-right: 0.5em;
-    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
     font-size: 1.75rem;
 }
 #dropdown-content {
@@ -54,7 +57,7 @@ header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
 }
-@media only screen and (max-width: 900px) { /* 900 or less */
+@media only screen and (max-width: 1300px) { /* 900 or less */
     #nav-extra { display: none; }
     .nav-header-grid {grid-template-columns: 100%}
 }
@@ -232,14 +235,14 @@ footer {
 @media only screen and (min-width: 2560px) { /* 2560 or more (1440p) */
     #body-container {width: 77.5%;}
     .welcome-text {font-size: 5rem;}
-}
-@media only screen and (min-width: 3499px) { /* 3499 or more */
-    #body-container {width: 77.5%;}
-    .welcome-text {font-size: 6rem;}
+    #nav-page-links a {font-size: 2.5rem;}
+    #nav-extra {font-size: 2em;}
 }
 @media only screen and (min-width: 3500px) { /* 3500 or more (4k) */
     #body-container {width: 75%;}
-    .welcome-text {font-size: 7rem;}
+    .welcome-text {font-size: 6.5rem;}
+    #nav-page-links a {font-size: 3.5rem;}
+    #nav-extra {font-size: 3em;}
 }
 
 /* 1080 Default */
@@ -247,6 +250,8 @@ footer {
 @media only screen and (max-width: 1650px) { /* 1650 or less */
     #body-container {width: 80%;}
     .welcome-text {font-size: 3.25rem;}
+    #nav-page-links a {font-size: 1.5rem;}
+    #nav-extra {font-size: 1.25em;}
 }
 @media only screen and (max-width: 1366px) { /* 1366 or less */
     #body-container {width: 82.5%;}
@@ -259,14 +264,16 @@ footer {
 @media only screen and (max-width: 1024px) { /* 1024 or less (Tablets) */
     #body-container {width: 87.5%;}
     .welcome-text {font-size: 2.35rem;}
+    #nav-page-links a {font-size: 1.3rem;}
+    #nav-extra {font-size: 0.8em;}
 }
 @media only screen and (max-width: 768px) { /* 768 or less (Large Phones) */
+    #nav-page-links {display: none;}
+    #nav-small-menu {display: block;}
     #body-container {width: 90%;}
     .welcome-text {font-size: 2rem;}
 }
 @media only screen and (max-width: 640px) { /* 640 or less (Small Phones) */
-    #nav-page-links {display: none;}
-    #nav-small-menu {display: block;}
     #body-container {width: 92.5%;}
     .welcome-text {
         font-size: 1.75rem;
