@@ -29,9 +29,7 @@ document.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const dropdownButton = document.getElementById("dropdown-button");
-    const dropdownContent = document.getElementById("dropdown-content");
-    
-    updateNavCurrentPage();  
+    const dropdownContent = document.getElementById("dropdown-content");     
 
     dropdownButton.addEventListener("click", () => {
         dropdownContent.style.display =
@@ -44,11 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
           dropdownContent.style.display = "none";
         }
       });
+
+      updateNavCurrentPage(); 
+      updateHeroHeight();
 });
 
 window.addEventListener("resize", function() {
     updateNavCurrentPage();
+    updateHeroHeight();
 });
+
+window.addEventListener("load", updateHeroHeight);
 //#endregion
 
 //#region Functions
@@ -102,6 +106,16 @@ function updateNavCurrentPage() {
             }
             console.error("updateNavCurrentPage(scripts.js): no html found; using default");
             break;
+    }
+}
+
+function updateHeroHeight() {
+    const hero = document.querySelector(".hero")
+    const header = document.querySelector(".nav-header-grid");
+
+    if (header && hero) {
+        let headerHeight = header.offsetHeight;
+        hero.style.height = `calc(100vh - ${headerHeight}px)`;
     }
 }
 //#endregion
