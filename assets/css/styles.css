@@ -191,11 +191,13 @@ div {
     padding: 2em;
     height: 100%;
 }
-@media only screen and (max-width: 1400px) {
-    #hero-section {
-        height: 200vh;
+@media only screen and (max-width: 1400px) { /* Stack */
+    #intro-sub-hero-section {
+        display: block;
+        float: none;
+        width: 100%;
     }
-    #intro-sub-hero-section, #featured-sub-hero-section {
+    #featured-sub-hero-section {
         display: block;
         float: none;
         width: 100%;

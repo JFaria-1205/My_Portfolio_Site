@@ -1,7 +1,3 @@
-//#region Global Variables
-
-//#endregion
-
 //#region Event-Listeners
 window.addEventListener("scroll", function () {
     const scrollY = window.scrollY; // Get the vertical scroll position
@@ -110,12 +106,21 @@ function updateNavCurrentPage() {
 }
 
 function updateHeroHeight() {
-    const hero = document.querySelector(".hero")
+    const hero = document.querySelector(".hero");
     const header = document.querySelector(".nav-header-grid");
+    const intro = document.querySelector(".intro");
+    const welcome = document.querySelector(".welcome-text");
 
     if (header && hero) {
         let headerHeight = header.offsetHeight;
-        hero.style.height = `calc(100vh - ${headerHeight}px)`;
+        let welcomeHeight = welcome.offsetHeight;
+
+        if (window.innerWidth < 1400) {
+            hero.style.height = `calc(200vh - ${headerHeight}px)`;
+            intro.style.height = `calc(100vh - ${headerHeight}px - ${welcomeHeight}px)`
+        } else {             
+            hero.style.height = `calc(100vh - ${headerHeight}px)`;
+        }        
     }
 }
 //#endregion
