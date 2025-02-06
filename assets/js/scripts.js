@@ -1,4 +1,4 @@
-//#region Event-Listeners
+// Background image scroll speed control
 window.addEventListener("scroll", function () {
     const scrollY = window.scrollY; // Get the vertical scroll position
     const scrollSpeed = 0.3;
@@ -8,22 +8,23 @@ window.addEventListener("scroll", function () {
     document.body.style.backgroundPosition = `center -${backgroundOffset}px`;
 });
 
+// Bottom glow (additional content indicator)
 document.addEventListener("scroll", () => {
     const glowIndicator = document.querySelector(".glow-indicator");
     const footer = document.querySelector(".footer");
 
-    const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    const atBottom = window.innerHeight + window.scrollY + (footer.offsetHeight * 0.25) >= document.body.offsetHeight;
 
     if (atBottom) {
         glowIndicator.style.display = "none";
-        footer.style.display = "block";
     } else {
         glowIndicator.style.display = "block";
-        footer.style.display = "none";
     }
 });
 
+// Event Listener (DOM Content Loaded)
 document.addEventListener("DOMContentLoaded", function () {
+    //#region Nav Dropdown Controller
     const dropdownButton = document.getElementById("dropdown-button");
     const dropdownContent = document.getElementById("dropdown-content");     
 
@@ -38,20 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
           dropdownContent.style.display = "none";
         }
       });
-
-      updateNavCurrentPage(); 
-      updateHeroHeight();
+    //#endregion
+      updateNavCurrentPage();
 });
 
+//  Window Resize event listener
 window.addEventListener("resize", function() {
     updateNavCurrentPage();
     updateHeroHeight();
 });
 
-window.addEventListener("load", updateHeroHeight);
-//#endregion
+// Event Listener (Load {All content})
+window.addEventListener("load", function(){
+    updateHeroHeight();
+});
 
-//#region Functions
 function updateNavCurrentPage() {
     let homeLinks = document.getElementsByClassName("nav_home_link");
     let projectsLinks = document.getElementsByClassName("nav_projects_link");
@@ -123,5 +125,4 @@ function updateHeroHeight() {
         }        
     }
 }
-//#endregion
 
