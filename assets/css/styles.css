@@ -1,7 +1,96 @@
-/* Site General Setup */
-:root {
-    /*Test*/
+/*  TEST ELEMENTS - DELETE LATER */
+#test {
+    background-color: rgb(12, 12, 12);
+    border: 10px solid rgb(72, 30, 20);
+    padding: 1em;
 }
+#color-1 span {
+    color: rgb(242, 97, 63);
+    background-color: rgb(242, 97, 63);
+}
+#color-2 span {
+    color: rgb(155, 57, 34);
+    background-color: rgb(155, 57, 34);
+}
+#color-3 span {
+    color: rgb(72, 30, 20);
+    background-color: rgb(72, 30, 20);
+}
+#color-4 span {
+    color: wheat;
+    background-color: wheat;
+}
+/*  END TEST */
+
+
+
+/* Site Header */
+header {
+    padding: 0.5em;
+    background-color: rgb(155, 57, 34);
+    position: sticky;
+    top: 0;
+}
+#nav-page-links {
+    display: grid;
+    justify-self: center; /* Center entire grid */
+    justify-items: center; /* Center items inside */
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+#nav-page-links a {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    font-size: 1.75rem;
+}
+#dropdown-content {
+    display: none;
+}
+#nav-extra {
+    color: rgb(255, 150, 127);
+    font-size: 1.5rem;
+}
+.nav-header-grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+@media only screen and (max-width: 1300px) { /* 900 or less */
+    #nav-extra { display: none; }
+    .nav-header-grid {grid-template-columns: 100%}
+}
+.nav-link:hover {
+    color: rgb(12, 12, 12);
+    background-color: wheat;
+    border-radius: 0.75em; /* Media Query */
+    font-weight: 400;
+}
+.nav-link-mini-menu:hover {
+    color: rgb(12, 12, 12);
+    padding: 0.2em;
+    background-color: wheat;
+    border-radius: 10px;
+    font-weight: 400;
+}
+#nav-small-menu {
+    display: none;
+    justify-self: center;
+    text-align: center;
+}
+#small-nav-menu-pic {
+    width: 2em;
+    border-radius: 10px;
+    justify-self: center;
+}
+#dropdown-content {padding-top: 0.5em;}
+#dropdown-content li {padding: 0.25em;}
+/* End Site Header */
+
+
+
+/* Site General Setup */
 body {
     background-image: url('../../assets/images/space-bg.png');
     background-size: cover;
@@ -13,7 +102,7 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 #body-container{
-    width: 92.5%;    
+    width: 70%;
     border-left: 0.25em solid wheat;;
     border-right: 0.25em solid wheat;;
     background-color: rgb(12, 12, 12, 1);
@@ -52,7 +141,7 @@ div {
     position: fixed;
     bottom: -1em;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 1em;
     background: radial-gradient(circle, rgba(245, 222, 179, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
     box-shadow: 0 0 2em 1em rgba(245, 222, 179, 0.8);
@@ -69,81 +158,16 @@ div {
 /* End General Setup */
 
 
-/* Site Header */
-header {
-    padding: 0.5em;
-    background-color: rgb(155, 57, 34);
-    position: sticky;
-    top: 0;
-}
-#nav-page-links {
-    display: grid;
-    justify-self: center; /* Center entire grid */
-    justify-items: center; /* Center items inside */
-    grid-template-columns: 20% 20% 20% 20% 20%;
-}
-#nav-page-links a {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    font-size: 1.75rem;
-    line-height: 4rem;
-}
-#dropdown-content {
-    display: none;
-}
-.nav-extra {
-    color: rgb(255, 150, 127);
-    font-size: 1.5rem;
-    display: none;
-}
-.nav-desktop {
-    display: none;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
+
+/* index page */
+#hero-section {
     width: 100%;
 }
-.nav-mobile {
-    display: block;
-}
-.nav-link:hover {
-    color: rgb(12, 12, 12);
-    background-color: wheat;
-    border-radius: 0.75em; /* Media Query */
-    font-weight: 400;
-}
-.nav-link-mini-menu:hover {
-    color: rgb(12, 12, 12);
-    padding: 0.2em;
-    background-color: wheat;
-    border-radius: 10px;
-    font-weight: 400;
-}
-#nav-small-menu {
-    display: none;
-    justify-self: center;
-    text-align: center;
-}
-#small-nav-menu-pic {
-    width: 2em;
-    border-radius: 10px;
-    justify-self: center;
-}
-#dropdown-content {padding-top: 0.5em;}
-#dropdown-content li {padding: 0.25em;}
-/* End Site Header */
-
-
-/* index.html page */
-#hero-section {
-    width: 100% ;
-}
 .welcome-text h1{
-    font-size: 3rem;
-    line-height: 2.85rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .introduction {
     height:max-content;
@@ -200,7 +224,7 @@ header {
 
 /* Site Footer */
 footer {
-    display: block;
+    display: none; /* Default hidden */
     padding: 1em;
     background-color: rgb(155, 57, 34);
     color: white;
@@ -215,10 +239,8 @@ footer {
 
 
 
-
 /* Breakpoints For Window Resizing / Different Resolutions (1080 Default) */
-/* old breakpoints
-@media only screen and (min-width: 2560px) { // 2560 or more (1440p)
+@media only screen and (min-width: 2560px) { /* 2560 or more (1440p) */
     #body-container {width: 77.5%;}
     .welcome-text h1 {font-size: 5rem; line-height: 5.5rem;}
     #nav-page-links a {font-size: 2.5rem;}
@@ -232,42 +254,35 @@ footer {
         line-height: 2rem;
     }
 }
-@media only screen and (min-width: 3500px) { // 3500 or more (4k)
+@media only screen and (min-width: 3500px) { /* 3500 or more (4k) */
     #body-container {width: 75%;}
     .welcome-text h1 {font-size: 6.5rem; line-height: 7rem;}
     #nav-page-links a {font-size: 3.5rem;}
     #nav-extra {font-size: 3em;}
 }
- 
-1080 Default 
-.welcome-text h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-#body-container {width: 72.5%;}
 
-@media only screen and (max-width: 1650px) {// 1650 or less 
+/* 1080 Default */
+
+@media only screen and (max-width: 1650px) { /* 1650 or less */
     #body-container {width: 80%;}
     .welcome-text h1 {font-size: 3.25rem; line-height: 3.75rem;}
     #nav-page-links a {font-size: 1.5rem;}
-    .nav-extra {font-size: 1.25em;}
+    #nav-extra {font-size: 1.25em;}
 }
-@media only screen and (max-width: 1366px) { //1366 or less 
+@media only screen and (max-width: 1366px) { /* 1366 or less */
     #body-container {width: 82.5%;}
     .welcome-text h1 {font-size: 2.9rem; line-height: 3.4rem;}
 }
-@media only screen and (max-width: 1280px) { // Laptops 
+@media only screen and (max-width: 1280px) { /* 1280 or less (Laptops) */
     #body-container {width: 87.5%;}
     .welcome-text h1 {font-size: 2.75rem; line-height: 3.25rem;}
 }
-@media only screen and (max-width: 1024px) { // Tablets 
+@media only screen and (max-width: 1024px) { /* 1024 or less (Tablets) */
     #body-container {width: 87.5%;}
     #nav-page-links a {font-size: 1.3rem;}
-    .nav-extra {font-size: 0.8em;}
+    #nav-extra {font-size: 0.8em;}
 }
-@media only screen and (max-width: 768px) { // Large Phones 
+@media only screen and (max-width: 768px) { /* 768 or less (Large Phones) */
     #nav-page-links {display: none;}
     #nav-small-menu {display: block;}
     #body-container {width: 90%;}
@@ -278,32 +293,13 @@ footer {
         padding-right: 0.5em;
     }
 }
-@media only screen and (max-width: 640px) { // Small Phones 
-
+@media only screen and (max-width: 640px) { /* 640 or less (Small Phones) */
+    #body-container {width: 92.5%;}
+    .welcome-text h1 {
+        font-size: 3rem;
+        line-height: 2.85rem;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
 }
- End Breakpoints */
-
-
-/*  TEST ELEMENTS - DELETE LATER */
-#test {
-    background-color: rgb(12, 12, 12);
-    border: 10px solid rgb(72, 30, 20);
-    padding: 1em;
-}
-#color-1 span {
-    color: rgb(242, 97, 63);
-    background-color: rgb(242, 97, 63);
-}
-#color-2 span {
-    color: rgb(155, 57, 34);
-    background-color: rgb(155, 57, 34);
-}
-#color-3 span {
-    color: rgb(72, 30, 20);
-    background-color: rgb(72, 30, 20);
-}
-#color-4 span {
-    color: wheat;
-    background-color: wheat;
-}
-/*  END TEST */
+/* End Breakpoints */

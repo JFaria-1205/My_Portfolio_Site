@@ -110,19 +110,10 @@ function updateNavCurrentPage() {
 function updateHeroHeight() {
     const hero = document.querySelector(".hero");
     const header = document.querySelector(".nav-header-grid");
-    const intro = document.querySelector(".intro");
-    const welcome = document.querySelector(".welcome-text");
 
     if (header && hero) {
         let headerHeight = header.offsetHeight;
-        let welcomeHeight = welcome.offsetHeight;
-
-        if (window.innerWidth < 1400) {
-            hero.style.height = `calc(200vh - ${headerHeight}px)`;
-            intro.style.height = `calc(100vh - ${headerHeight}px - ${welcomeHeight}px)`
-        } else {             
-            hero.style.height = `calc(100vh - ${headerHeight}px)`;
-        }        
+        hero.style.height = `calc(100vh - ${headerHeight}px)`;       
     }
 }
 
