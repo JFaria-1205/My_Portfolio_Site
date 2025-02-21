@@ -4,7 +4,7 @@ if (typeof siteHeader ==="undefined"){
     `
         <header class="nav-header sticky items-center">
             <div class="nav-desktop items-center">
-                <a id="nav-name" class="nav-extra font-thin text-lg z-0" href="test.html">Jason Faria</a>
+                <a id="nav-name" class="nav-extra font-thin text-lg z-0 text-start" href="test.html">Jason Faria</a>
 
                 <nav id="nav-page-links" class="font-thin z-10">
                     <a href="index.html" class="nav_home_link nav-link">Home</a>

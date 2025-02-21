@@ -53,7 +53,8 @@ header {
     color: rgb(255, 150, 127);
     font-size: 1.5rem;
 }
-.nav-header-grid {
+.nav-desktop {
+    width: 100%;
     display: grid;
     grid-template-columns: 20% 60% 20%;
 }
@@ -239,8 +240,8 @@ footer {
 
 
 
-/* Breakpoints For Window Resizing / Different Resolutions (1080 Default) */
-@media only screen and (min-width: 2560px) { /* 2560 or more (1440p) */
+/* Breakpoints For Window Resizing / Different Resolutions (1080 Default)
+@media only screen and (min-width: 2560px) {  2560 or more (1440p) 
     #body-container {width: 77.5%;}
     .welcome-text h1 {font-size: 5rem; line-height: 5.5rem;}
     #nav-page-links a {font-size: 2.5rem;}
@@ -254,35 +255,35 @@ footer {
         line-height: 2rem;
     }
 }
-@media only screen and (min-width: 3500px) { /* 3500 or more (4k) */
+@media only screen and (min-width: 3500px) {  3500 or more (4k)
     #body-container {width: 75%;}
     .welcome-text h1 {font-size: 6.5rem; line-height: 7rem;}
     #nav-page-links a {font-size: 3.5rem;}
     #nav-extra {font-size: 3em;}
 }
 
-/* 1080 Default */
+/* 1080 Default
 
-@media only screen and (max-width: 1650px) { /* 1650 or less */
+@media only screen and (max-width: 1650px) {  1650 or less 
     #body-container {width: 80%;}
     .welcome-text h1 {font-size: 3.25rem; line-height: 3.75rem;}
     #nav-page-links a {font-size: 1.5rem;}
     #nav-extra {font-size: 1.25em;}
 }
-@media only screen and (max-width: 1366px) { /* 1366 or less */
+@media only screen and (max-width: 1366px) {  1366 or less 
     #body-container {width: 82.5%;}
     .welcome-text h1 {font-size: 2.9rem; line-height: 3.4rem;}
 }
-@media only screen and (max-width: 1280px) { /* 1280 or less (Laptops) */
+@media only screen and (max-width: 1280px) { 1280 or less (Laptops) 
     #body-container {width: 87.5%;}
     .welcome-text h1 {font-size: 2.75rem; line-height: 3.25rem;}
 }
-@media only screen and (max-width: 1024px) { /* 1024 or less (Tablets) */
+@media only screen and (max-width: 1024px) { 1024 or less (Tablets) 
     #body-container {width: 87.5%;}
     #nav-page-links a {font-size: 1.3rem;}
     #nav-extra {font-size: 0.8em;}
 }
-@media only screen and (max-width: 768px) { /* 768 or less (Large Phones) */
+@media only screen and (max-width: 768px) { 768 or less (Large Phones)
     #nav-page-links {display: none;}
     #nav-small-menu {display: block;}
     #body-container {width: 90%;}
@@ -293,7 +294,7 @@ footer {
         padding-right: 0.5em;
     }
 }
-@media only screen and (max-width: 640px) { /* 640 or less (Small Phones) */
+@media only screen and (max-width: 640px) { 640 or less (Small Phones)
     #body-container {width: 92.5%;}
     .welcome-text h1 {
         font-size: 3rem;
@@ -302,4 +303,4 @@ footer {
         padding-right: 0.5em;
     }
 }
-/* End Breakpoints */
+*/
