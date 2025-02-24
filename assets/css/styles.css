@@ -46,10 +46,11 @@ header {
     padding-right: 0.75em;
     font-size: 1.75rem;
 }
-#dropdown-content {
+#dropdown-content-mobile {
     display: none;
+    padding-top: 0.5em;
 }
-#nav-extra {
+.nav-extras {
     color: rgb(255, 150, 127);
     font-size: 1.5rem;
 }
@@ -58,35 +59,30 @@ header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
 }
-@media only screen and (max-width: 1300px) { /* 900 or less */
-    #nav-extra { display: none; }
-    .nav-header-grid {grid-template-columns: 100%}
-}
 .nav-link:hover {
     color: rgb(12, 12, 12);
     background-color: wheat;
     border-radius: 0.75em; /* Media Query */
     font-weight: 400;
 }
-.nav-link-mini-menu:hover {
+.nav-link-mobile-menu:hover {
     color: rgb(12, 12, 12);
     padding: 0.2em;
     background-color: wheat;
     border-radius: 10px;
     font-weight: 400;
 }
-#nav-small-menu {
+.nav-mobile {
     display: none;
     justify-self: center;
     text-align: center;
 }
-#small-nav-menu-pic {
-    width: 2em;
+#mobile-nav-menu-icon {
+    width: 3em;
     border-radius: 10px;
     justify-self: center;
 }
-#dropdown-content {padding-top: 0.5em;}
-#dropdown-content li {padding: 0.25em;}
+#dropdown-content-mobile li {padding: 0.25em;}
 /* End Site Header */
 
 
@@ -164,52 +160,6 @@ div {
 #hero-section {
     width: 100%;
 }
-.welcome-text h1{
-    font-size: 4rem;
-    line-height: 4.5rem;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-.introduction {
-    height:max-content;
-    justify-items: center;
-    justify-content: center;
-    justify-self: center;
-}
-#intro-sub-hero-section {
-    width: 50%;
-    float: left;
-    padding: 2em;
-    height: 100%;
-}
-#intro-sub-hero-section h2{
-    padding-left: 3em;
-    padding-right: 3em;
-}
-#featured-sub-hero-section {
-    width: 50%;
-    float: right;
-    padding: 2em;
-    height: 100%;
-}
-@media only screen and (max-width: 1400px) { /* Stack */
-    #intro-sub-hero-section {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    #featured-sub-hero-section {
-        display: block;
-        float: none;
-        width: 100%;
-        height: 100vh;
-    }
-}
-#intro-profile-pic {
-    width: 15em;
-    justify-self: center;
-    border-radius: 3em;
-}
 #short-about-section {
     height: 100vh;
 }
@@ -239,6 +189,21 @@ footer {
 /* End Footer */
 
 
+@media only screen and (max-width: 1300px) { /* 1300 or less */
+    .nav-extras { display: none; }
+    .nav-desktop {grid-template-columns: 100%}
+}
+@media only screen and (max-width: 768px) { /* 768 or less */
+    .nav-desktop {display: none;}
+    .nav-mobile {display: block;}
+    #body-container {width: 90%;}
+    .welcome-text h1 {
+        font-size: 3rem;
+        line-height: 2.85rem;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
 
 /* Breakpoints For Window Resizing / Different Resolutions (1080 Default)
 @media only screen and (min-width: 2560px) {  2560 or more (1440p) 

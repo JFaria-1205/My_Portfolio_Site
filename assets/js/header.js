@@ -4,7 +4,7 @@ if (typeof siteHeader ==="undefined"){
     `
         <header class="nav-header sticky items-center">
             <div class="nav-desktop items-center">
-                <a id="nav-name" class="nav-extra font-thin text-lg z-0 text-start" href="test.html">Jason Faria</a>
+                <a id="nav-name" class="nav-extras font-thin text-lg z-0 text-start" href="test.html">Jason Faria</a>
 
                 <nav id="nav-page-links" class="font-thin z-10">
                     <a href="index.html" class="nav_home_link nav-link">Home</a>
@@ -14,19 +14,19 @@ if (typeof siteHeader ==="undefined"){
                     <a href="contact.html" class="nav_contact_link nav-link">Contact</a>
                 </nav>
 
-                <a id="nav-title" class="nav-extra font-thin text-lg text-right z-0" href="index.html">Portfolio</a>
+                <a id="nav-title" class="nav-extras font-thin text-lg text-right z-0" href="index.html">Portfolio</a>
             </div>
             <div class="nav-mobile">
-                <ul id="nav-small-menu" class="show-on-mobile font-thin text-xl z-10 items-center">
-                    <li id="dropdown-button" class="nav-link-mini-menu">
-                        <img id="small-nav-menu-pic" src="assets/images/nav-menu-button.png">
+                <ul id="nav-small-menu" class="font-thin text-xl z-10 items-center">
+                    <li id="dropdown-button-mobile" class="nav-link-mobile-menu">
+                        <img id="mobile-nav-menu-icon" src="assets/images/nav-menu-button.png">
                     </li>
-                    <ul id="dropdown-content">
-                        <li><a href="index.html" class="nav_home_link nav-link-mini-menu">Home</a></li>
-                        <li><a href="projects.html" class="nav_projects_link nav-link-mini-menu">Projects</a></li>
-                        <li><a href="resume.html" class="nav_resume_link nav-link-mini-menu">Resume</a></li>
-                        <li><a href="about.html" class="nav_about_link nav-link-mini-menu">About</a></li>
-                        <li><a href="contact.html" class="nav_contact_link nav-link-mini-menu">Contact</a></li>
+                    <ul id="dropdown-content-mobile">
+                        <li><a href="index.html" class="nav_home_link nav-link-mobile-menu">Home</a></li>
+                        <li><a href="projects.html" class="nav_projects_link nav-mobile-mini-menu">Projects</a></li>
+                        <li><a href="resume.html" class="nav_resume_link nav-link-mobile-menu">Resume</a></li>
+                        <li><a href="about.html" class="nav_about_link nav-link-mobile-menu">About</a></li>
+                        <li><a href="contact.html" class="nav_contact_link nav-link-mobile-menu">Contact</a></li>
                 </ul> 
             </div>   
         </header>

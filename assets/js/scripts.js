@@ -109,7 +109,7 @@ function updateNavCurrentPage() {
 
 function updateHeroHeight() {
     const hero = document.querySelector(".hero");
-    const header = document.querySelector(".nav-header-grid");
+    const header = document.querySelector(".nav-header");
 
     if (header && hero) {
         let headerHeight = header.offsetHeight;
