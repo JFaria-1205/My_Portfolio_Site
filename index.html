@@ -36,11 +36,19 @@
         <title>Jason Faria | Portfolio</title>
     </head>
 
-    <body><div id="body-container">        
+    <body>
+    <div id="preloader">
+        <div id="preloader-content">
+            <img id="spaceship" src="assets/images/spaceship-smoke-1.jpg" alt="Spaceship">
+            <p id="loading-text">Loading</p>
+        </div>
+    </div>
+
+    <div id="body-container" class="hidden">        
         <div id="hero-section" class="hero">
             <div id="hero-featured">
                 <div id="featured-video-sizing">
-                    <video autoplay loop muted playsinline poster="assets/images/featured-poster.jpg">
+                    <video id="hero-video" autoplay loop muted playsinline poster="assets/images/featured-poster.jpg">
                         <source src="assets/videos/featured-video-fixed.webm" type="video/webm">
                         <source src="assets/videos/Featured Video.mp4" type="video/mp4">
                     </video>
@@ -83,7 +91,8 @@
                 <a href="pages/projects.html">Building<br>This Site</a>
             </div>
         </div>
-    </div></body>
+    </div>
+    </body>
 
     <div class="glow-indicator"></div>
 
