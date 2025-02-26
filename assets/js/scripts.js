@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
       updateNavCurrentPage();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const spaceship = document.getElementById("spaceship");
+    const loadingText = document.getElementById("loading-text");
+    const preloader = document.getElementById("preloader");
+    const bodyContainer = document.getElementById("body-container");
+    const heroVideo = document.getElementById("hero-video");
+    
+})
+
 //  Window Resize event listener
 window.addEventListener("resize", function() {
     updateNavCurrentPage();
