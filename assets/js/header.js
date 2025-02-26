@@ -22,13 +22,13 @@ if (typeof siteHeader ==="undefined"){
                         <img id="mobile-nav-menu-icon" src="assets/images/nav-menu-button.png">
                     </li>
                     <ul id="dropdown-content-mobile">
-                        <li><a href="index.html" class="nav_home_link nav-link-mobile-menu">Home</a></li>
-                        <li><a href="projects.html" class="nav_projects_link nav-mobile-mini-menu">Projects</a></li>
-                        <li><a href="resume.html" class="nav_resume_link nav-link-mobile-menu">Resume</a></li>
-                        <li><a href="about.html" class="nav_about_link nav-link-mobile-menu">About</a></li>
-                        <li><a href="contact.html" class="nav_contact_link nav-link-mobile-menu">Contact</a></li>
-                </ul> 
-            </div>   
+                        <li><a href="index.html" class="nav_home_link">Home</a></li>
+                        <li><a href="projects.html" class="nav_projects_link">Projects</a></li>
+                        <li><a href="resume.html" class="nav_resume_link">Resume</a></li>
+                        <li><a href="about.html" class="nav_about_link">About</a></li>
+                        <li><a href="contact.html" class="nav_contact_link">Contact</a></li>
+                </ul>
+            </div>
         </header>
     `;
 

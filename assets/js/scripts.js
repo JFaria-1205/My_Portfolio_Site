@@ -25,8 +25,8 @@ document.addEventListener("scroll", () => {
 // Event Listener (DOM Content Loaded)
 document.addEventListener("DOMContentLoaded", function () {
     //#region Nav Dropdown Controller
-    const dropdownButton = document.getElementById("dropdown-button");
-    const dropdownContent = document.getElementById("dropdown-content");     
+    const dropdownButton = document.getElementById("dropdown-button-mobile");
+    const dropdownContent = document.getElementById("dropdown-content-mobile");     
 
     dropdownButton.addEventListener("click", () => {
         dropdownContent.style.display =
@@ -50,7 +50,7 @@ window.addEventListener("resize", function() {
 });
 
 // Event Listener (Load {All content})
-window.addEventListener("load", function(){
+window.addEventListener("load", function() {
     updateHeroHeight();
 });
 
