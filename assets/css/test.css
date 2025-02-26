@@ -1,0 +1,23 @@
+/*  TEST ELEMENTS - DELETE LATER */
+#test {
+    background-color: rgb(12, 12, 12);
+    border: 10px solid rgb(72, 30, 20);
+    padding: 1em;
+}
+#color-1 span {
+    color: rgb(242, 97, 63);
+    background-color: rgb(242, 97, 63);
+}
+#color-2 span {
+    color: rgb(155, 57, 34);
+    background-color: rgb(155, 57, 34);
+}
+#color-3 span {
+    color: rgb(72, 30, 20);
+    background-color: rgb(72, 30, 20);
+}
+#color-4 span {
+    color: wheat;
+    background-color: wheat;
+}
+/*  END TEST */

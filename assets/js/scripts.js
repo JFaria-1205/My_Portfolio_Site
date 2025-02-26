@@ -69,28 +69,28 @@ function updateNavCurrentPage() {
             }            
             break;
         
-        case "/projects.html":
+        case "/pages/projects.html":
             for (let element of projectsLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "rgb(242, 97, 63)";
             }
             break;
 
-        case "/resume.html":
+        case "/pages/resume.html":
             for (let element of resumeLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "rgb(242, 97, 63)";
             }
             break;
 
-        case "/about.html":
+        case "/pages/about.html":
             for (let element of aboutLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "rgb(242, 97, 63)";
             }
             break;
 
-        case "/contact.html":
+        case "/pages/contact.html":
             for (let element of contactLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "rgb(242, 97, 63)";
