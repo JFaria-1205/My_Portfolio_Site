@@ -2,7 +2,7 @@
 if (typeof siteHeader ==="undefined"){
     const siteHeader = 
     `
-        <header class="nav-header sticky items-center">
+        <header id="head" class="nav-header sticky items-center">
             <div class="nav-desktop items-center">
                 <a id="nav-name" class="nav-extras font-thin text-lg z-0 text-start" href="../test.html">Jason Faria</a>
 

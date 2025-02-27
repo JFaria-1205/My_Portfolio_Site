@@ -6,6 +6,13 @@ header {
     top: 0;
     z-index: 10;
 }
+@keyframes headerMoveDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+.header-move-down {
+    animation: headerMoveDown 10s ease-in-out forwards;
+}
 #nav-page-links {
     display: grid;
     justify-self: center; /* Center entire grid */
@@ -71,7 +78,16 @@ body {
     display: grid;
     color: white;
     font-family: 'Outfit', sans-serif;
+    background-position: center top;
 }
+.bg-move-down {
+    animation: bgMoveDown 4s ease-in-out forwards;
+}
+@keyframes bgMoveDown {
+    0% { background-position: center -200vh; }
+    100% { background-position: center top; }
+}
+
 #body-container{
     width: 70%;
     border-left: 0.25em solid wheat;;
