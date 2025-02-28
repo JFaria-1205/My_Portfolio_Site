@@ -32,71 +32,85 @@
         <!-- Scripts -->
         <script src="assets/js/header.js" defer></script>
         <script src="assets/js/scripts.js"></script>
-        <script src="assets/js/intro-animations.js"></script>
+        <script src="assets/js/preloader-animations.js"></script>
+        <link rel="preload" as="image" href="assets/images/spaceship-smoke-1.png"> <!-- preload the spaceship image so no alt text is shown unnecessarily -->
 
         <title>Jason Faria | Portfolio</title>
     </head>
 
     <body>
-    <div id="preloader">
-        <div id="preloader-content">
-            <div id="preloader-background"></div>
-            <img id="spaceship" src="assets/images/spaceship-smoke-1.png" alt="Spaceship">
-            <p id="loading-text">Loading</p>
+        <div id="preloader">
+            <div id="preloader-content">
+                <div id="preloader-background"></div>
+                <img id="spaceship" src="assets/images/spaceship-smoke-1.png" alt="Spaceship">
+                <p id="loading-text">Loading</p>
+            </div>
         </div>
-    </div>
-    <div id="body-container" class="hidden">        
-        <div id="hero-section" class="hero">
-            <div id="hero-featured">
-                <div id="featured-video-sizing">
-                    <video id="hero-video" class="hidden" autoplay loop muted playsinline poster="assets/images/featured-poster.jpg">
-                        <source src="assets/videos/featured-video-fixed.webm" type="video/webm">
-                        <source src="assets/videos/Featured Video.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div id="hero-name">
-                <h1><span>Jason<br>Faria<br>Portfolio</span></h1>
-            </div>
-        </div><!-- end hero-section -->
-        <div id="non-hero-content-container">
-            <div id="short-about-section">
-                <div id="homepage-about-left-col">
-                    <h1><span style="color: white;">Hey, I'm </span><span style="font-weight: 500;"><u>Jason</u></span></h1>
-                    <img id="homepage-profile-pic" src="assets/images/profile-pic-editedv3.jpg">
-                </div>
-                <div id="homepage-about-right-col">
-                    <div class="grid grid-rows-4">
-                        <div style="justify-self: auto;">
-                            <h2 class="text-left"><img src="assets/images/html-css-js.png" style="display: inline;"><span> a web developer,</span></h2>
-                        </div>
-                        <div style="justify-self: auto;">                    
-                            <h2 class="text-right"><span>software engineer, </span><img src="assets/images/swe-image.png" style="display: inline;"></h2>
-                        </div>
-                        <div style="justify-self: auto;">   
-                            <h2 class="text-left"><img src="assets/images/programming-languages.png" style="display: inline;"><span> programmer,</span></h2>
-                        </div>
-                        <div style="justify-self: auto;">
-                            <h2 class="text-right"><span>and game developer </span><img src="assets/images/game-dev-image.png" style="display: inline;"></h2>
-                        </div>
+
+        <div id="body-container" class="hidden">        
+            <div id="hero-section" class="hero">
+                <div id="hero-featured">
+                    <div id="featured-video-sizing">
+                        <video id="hero-video" autoplay loop muted playsinline poster="assets/images/featured-poster.jpg">
+                            <source src="assets/videos/featured-video-fixed.webm" type="video/webm">
+                            <source src="assets/videos/Featured Video.mp4" type="video/mp4">
+                        </video>
                     </div>
-                </div>                
-            </div>
-            <div id="call-to-action-section">
-                <h1>This portfolio is a testament to my dedication, creativity, and technical expertise in the world of computing. Feel free to explore and discover my journey!</h1>
-                <div id="cta-buttons">
-                    <a href="pages/projects.html">View<br>Projects</a>
-                    <a href="pages/about.html">About<br>Me</a>
-                    <a href="pages/projects.html">Building<br>This Site</a>
                 </div>
+                <div id="hero-name">
+                    <h1><span>Jason<br>Faria<br>Portfolio</span></h1>
+                </div>
+            </div><!-- end hero-section -->
+            <div id="non-hero-content-container">
+                <div id="short-about-section">
+                    <div id="homepage-about-left-col" class="animate-on-scroll">
+                        <h1><span style="color: white;">Hey, I'm </span><span style="font-weight: 500;"><u>Jason</u></span></h1>
+                        <img id="homepage-profile-pic" src="assets/images/profile-pic-editedv3.jpg">
+                    </div>
+                    <div id="homepage-about-right-col" class="animate-on-scroll">
+                        <div class="grid grid-rows-4">
+                            <div style="justify-self: auto;">
+                                <h2 class="text-left"><img src="assets/images/html-css-js.png" style="display: inline;"><span> a web developer,</span></h2>
+                            </div>
+                            <div style="justify-self: auto;">                    
+                                <h2 class="text-right"><span>software engineer, </span><img src="assets/images/swe-image.png" style="display: inline;"></h2>
+                            </div>
+                            <div style="justify-self: auto;">   
+                                <h2 class="text-left"><img src="assets/images/programming-languages.png" style="display: inline;"><span> programmer,</span></h2>
+                            </div>
+                            <div style="justify-self: auto;">
+                                <h2 class="text-right"><span>and game developer </span><img src="assets/images/game-dev-image.png" style="display: inline;"></h2>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div id="call-to-action-section">
+                    <h1 class="animate-on-scroll">This portfolio is a testament to my dedication, creativity, and technical expertise in the world of computing. Feel free to explore and discover my journey!</h1>
+                    <div id="cta-buttons" class="animate-on-scroll">
+                        <a href="pages/projects.html">View<br>Projects</a>
+                        <a href="pages/about.html">About<br>Me</a>
+                    </div>
+                    <div id="cta-buttons" class="animate-on-scroll">
+                        <a href="index.html" onclick="replayIntro(event)">Replay Intro<br>Animation</a>
+                            <script>
+                                function replayIntro(event) {
+                                    event.preventDefault();
+                                    sessionStorage.removeItem("skipIntro");
+                                    window.location.href = "index.html";
+                                }
+                            </script>
+                        <a href="pages/projects.html">Building<br>This Site</a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-    </div>
     </body>
 
     <div class="glow-indicator"></div>
 
-    <footer id="foot" class="footer">
+    <footer id="foot" class="footer hidden">
         A portfolio website, created by Jason Faria<br><br>Thank you for scrolling this far!<br><span style="color: rgb(155, 57, 34);">You found the One-Piece! It's the friends you made along the way.</span>
     </footer>
 </html>

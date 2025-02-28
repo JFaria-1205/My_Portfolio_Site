@@ -31,17 +31,29 @@
         <!-- Scripts -->
         <script src="../assets/js/header.js" defer></script>
         <script src="../assets/js/scripts.js"></script>
+        <script src="../assets/js/preloader-animations.js"></script>
+        <link rel="preload" as="image" href="../assets/images/spaceship-smoke-1.png"> <!-- ensures spaceship image is preloaded -->
 
         <title>Jason Faria | Portfolio</title>
     </head>
 
-    <body><div id="body-container">
-        <h1>Resume</h1>
-    </div></body>
+    <body>
+        <div id="preloader">
+            <div id="preloader-content">
+                <div id="preloader-background"></div>
+                <img id="spaceship" src="../assets/images/spaceship-smoke-1.png" alt="Spaceship">
+                <p id="loading-text">Loading</p>
+            </div>
+        </div>
+
+        <div id="body-container" class="hidden"> 
+            <h1>Resume</h1>
+        </div>
+    </body>
 
     <div class="glow-indicator"></div>
 
-    <footer class="footer">
-        A portfolio website, created by Jason Faria<br><br>Thank you for scrolling this far!
+    <footer id="foot" class="footer hidden">
+        A portfolio website, created by Jason Faria
     </footer>
 </html>

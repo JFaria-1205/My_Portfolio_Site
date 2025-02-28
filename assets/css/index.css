@@ -1,73 +1,4 @@
 /* index page */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-#preloader-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#preloader-background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(12, 12, 12);
-    z-index: -100;
-}
-#spaceship {
-    width: 150px;
-}
-#loading-text {
-    font-size: 1.5rem;
-    color: white;
-    padding-top: 2em;
-    font-weight: 200;
-}
-
-.fade-out {
-    animation: fade 1.5s forwards;
-}
-@keyframes fade { /* Default fade-out (forwards); backwards for fade-in */
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-.fade-in {
-    opacity: 0;
-    animation: fade 1s ease-in-out backwards;
-}
-
-@keyframes bodyFade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-.body-fade-in {
-    animation: bodyFade 2s forwards;
-}
-
-.launch {
-    animation: moveUp 5s ease-in forwards;
-}
-@keyframes moveUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-150vh); }
-}
-
-.bg-fade-in {
-    animation: fade 1.5s ease-in-out forwards;
-}
-
-
 #hero-section {
     width: 100%;
 }
@@ -143,19 +74,23 @@
     display: grid;
     height: 60vh;
     position: relative;
+    min-height: fit-content;
 }
 #call-to-action-section h1 {
     width: 75%;
     justify-self: center;
     align-self: center;
+    padding-bottom: 2em;
 }
 #cta-buttons {
+    padding-bottom: 4em;
     display: flex;
     justify-content: center;
     gap: 5em;
     align-self: self-start;
 }
 #cta-buttons a {
+    min-width: 10em;
     padding: 1em 2em;
     border-radius: 1em;
     font-weight: 200;
@@ -170,7 +105,7 @@
     color: rgb(12, 12, 12);
     background-color: wheat;
     font-weight: 400;
-    padding: 1em 2.5em;
+    width: 11em;
 }
 /* End index page */
 
@@ -205,12 +140,6 @@
     #cta-buttons a {
         font-size: 1.5rem;
         line-height: 1.75rem;
-    }
-    #cta-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        padding-top: 2em;
     }    
 }
 @media only screen and (max-width: 1100px) {
@@ -235,6 +164,14 @@
     #homepage-profile-pic {
         padding-bottom: 1em;
     }
+    #cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding-bottom: 2em;
+    }
+    #call-to-action-section h1 {
+        width: 90%;
 }
 @media only screen and (max-width: 550px) {
     #featured-video-sizing {width: 300%;}

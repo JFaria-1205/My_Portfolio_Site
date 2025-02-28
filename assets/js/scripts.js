@@ -119,3 +119,19 @@ function updateHeroHeight() {
     }
 }
 
+//General animate on enter view
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll"); //Get all elements with class ".animate-on-scroll"
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view"); //Add animation class
+                observer.unobserve(entry.target); //Don't redo the animation once it leaves and re-enters view
+            }
+        });
+    }, { threshold: 0.2 }); //Animation triggers on 20% element visibility
+
+    elements.forEach(element => observer.observe(element));
+});
+
