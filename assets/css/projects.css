@@ -115,10 +115,21 @@
 }
 
 .custom-horizontal-line {
-    padding: 1em;
+    display: grid;
+    padding-bottom: 4em;
+}
+
+.custom-horizontal-line hr{
+    padding: 1.5px;
+    width: 60%;
+    justify-self: center;
+    align-items: center;
     border: none;
-    height: 3px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient effect */
+    background: linear-gradient(to right, #ff3b0a, #ffffff); /* Gradient effect */
     margin: 20px 0;
+}
+
+#bottom-text {
+    padding-bottom: 4em;
 }
 
