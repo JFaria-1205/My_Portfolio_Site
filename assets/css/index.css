@@ -45,10 +45,11 @@
 }
 
 #short-about-section {
-    height: 60vh;
+    min-height: 60vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 5em;
 }
 #homepage-about-left-col h1 {
@@ -58,6 +59,13 @@
 #homepage-profile-pic {
     width: 20em;
     border-radius: 3em;
+}
+#homepage-profile-pic:hover {
+    animation: growPicture 0.15s ease-out forwards;
+}
+@keyframes growPicture {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.3); }
 }
 #homepage-about-left-col {
     padding-right: 3em;
@@ -74,7 +82,7 @@
     display: grid;
     height: 60vh;
     position: relative;
-    min-height: fit-content;
+    height: fit-content;
 }
 #call-to-action-section h1 {
     width: 75%;
@@ -96,16 +104,23 @@
     font-weight: 200;
     font-size: 2rem;
     line-height: 2.25rem;
-    background-color: rgb(242, 97, 63);
+    background: linear-gradient(
+        160deg,
+        rgb(91, 33, 19) 5%,
+        rgb(242, 97, 63) 100%);
     color: white;
     text-align: center;
     pointer-events: auto;
 }
 #cta-buttons a:hover {
-    color: rgb(12, 12, 12);
+    color: white;
     background-color: wheat;
-    font-weight: 400;
-    width: 11em;
+    font-weight: 500;
+    animation: growButtons 0.1s ease-in-out forwards;
+}
+@keyframes growButtons {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
 /* End index page */
 
@@ -172,6 +187,7 @@
     }
     #call-to-action-section h1 {
         width: 90%;
+    }
 }
 @media only screen and (max-width: 550px) {
     #featured-video-sizing {width: 300%;}

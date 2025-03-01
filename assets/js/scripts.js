@@ -67,42 +67,42 @@ function updateNavCurrentPage() {
         case "/index.html":
             for (let element of homeLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }            
             break;
         
         case "/pages/projects.html":
             for (let element of projectsLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }
             break;
 
         case "/pages/resume.html":
             for (let element of resumeLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }
             break;
 
         case "/pages/about.html":
             for (let element of aboutLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }
             break;
 
         case "/pages/contact.html":
             for (let element of contactLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }
             break;   
         
         default:
             for (let element of homeLinks) {
                 element.style.fontWeight = "bold";
-                element.style.color = "rgb(242, 97, 63)";
+                element.style.color = "wheat";
             }
             console.error("updateNavCurrentPage(scripts.js): no html found; using default");
             break;

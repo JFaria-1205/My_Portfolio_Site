@@ -68,7 +68,10 @@
 /* Site Header */
 header {
     padding: 0.5em;
-    background-color: rgb(155, 57, 34);
+    background: linear-gradient(
+        150deg,
+        #47190f 5%,
+        #9b3822 100%);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -109,10 +112,13 @@ header {
     grid-template-columns: 20% 60% 20%;
 }
 .nav-link:hover {
-    color: rgb(12, 12, 12);
-    background-color: wheat;
+    color: white;
+    background: linear-gradient(
+        160deg,
+        #6d2a1a 5%,
+        #f97456 100%);
     border-radius: 0.75em; /* Media Query */
-    font-weight: 400;
+    font-weight: 500;
 }
 .nav-mobile {
     display: none;
@@ -212,7 +218,10 @@ div {
 footer {
     display: block;
     padding: 1em;
-    background-color: rgb(155, 57, 34);
+    background: linear-gradient(
+        to top,
+        #582014 5%,
+        #9b3822 100%);
     color: white;
     font-size: 1.5rem;
     line-height: 2rem;
