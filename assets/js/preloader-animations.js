@@ -30,9 +30,9 @@ function runPreloaderAnimations() {
 
     //Image rotation for spaceship loading animation
     const spaceshipLoadFrames = [
-        "../assets/images/spaceship-smoke-1.png",
-        "../assets/images/spaceship-smoke-2.png",
-        "../assets/images/spaceship-smoke-3.png"
+        "../../assets/images/spaceship-smoke-1.png",
+        "../../assets/images/spaceship-smoke-2.png",
+        "../../assets/images/spaceship-smoke-3.png"
     ];
 
     let frameIndex = 0; //index for spaceship anim func
@@ -50,7 +50,7 @@ function runPreloaderAnimations() {
         const dots = ".".repeat(loadingIndex);
         loadingText.textContent = `Loading${dots}`;
         loadingIndex = (loadingIndex + 1) % 4;
-    }, 400);
+    }, 400);    
 
     //On full page loaded, continue animations
     window.onload = () => {
@@ -62,7 +62,7 @@ function runPreloaderAnimations() {
         bodyContainer.classList.remove("hidden");
         header.classList.remove("hidden");
         footer.classList.remove("hidden");
-    };
+    };    
 }
 
 // Intro animation

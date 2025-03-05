@@ -19,7 +19,7 @@ if (typeof siteHeader ==="undefined"){
             <div class="nav-mobile">
                 <ul id="nav-small-menu" class="font-thin text-xl z-10 items-center">
                     <li id="dropdown-button-mobile" class="nav-link-mobile-menu">
-                        <img id="mobile-nav-menu-icon" src="../assets/images/nav-menu-button.png">
+                        <img id="mobile-nav-menu-icon" src="../../assets/images/nav-menu-button.png">
                     </li>
                     <ul id="dropdown-content-mobile">
                         <li><a href="../../index.html" class="nav_home_link" onclick="sessionStorage.setItem('skipIntro', 'true')">Home</a></li>

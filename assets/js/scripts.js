@@ -63,36 +63,36 @@ function updateNavCurrentPage() {
     let aboutLinks = document.getElementsByClassName("nav_about_link");
     let contactLinks = document.getElementsByClassName("nav_contact_link");
 
-    switch (window.location.pathname) {
-        case "/index.html":
+    switch (true) {
+        case window.location.pathname === "/index.html" || window.location.pathname === "/test.html":
             for (let element of homeLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "wheat";
-            }            
+            } 
             break;
         
-        case "/pages/projects.html":
+        case window.location.pathname === "/pages/projects.html" || /^\/pages\/projects\/.*\.html$/.test(window.location.pathname):
             for (let element of projectsLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "wheat";
             }
             break;
 
-        case "/pages/resume.html":
+        case window.location.pathname === "/pages/resume.html":
             for (let element of resumeLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "wheat";
             }
             break;
 
-        case "/pages/about.html":
+        case window.location.pathname === "/pages/about.html":
             for (let element of aboutLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "wheat";
             }
             break;
 
-        case "/pages/contact.html":
+        case window.location.pathname === "/pages/contact.html":
             for (let element of contactLinks) {
                 element.style.fontWeight = "bold";
                 element.style.color = "wheat";
