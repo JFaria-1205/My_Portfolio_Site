@@ -104,7 +104,7 @@ function runIntroAnimations() {
     const spaceshipLoadingAnimation = setInterval(() => {
         spaceship.src = spaceshipLoadFrames[frameIndex];
         frameIndex = (frameIndex + 1) % spaceshipLoadFrames.length;
-    }, 300);
+    }, 150);
 
 
     let loadingIndex = 0; //index for loading dots func
