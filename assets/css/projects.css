@@ -28,15 +28,6 @@
     border-radius: 3em;
 }
 
-#project-card:hover {
-    animation: cardHoverGrow 1s ease-out forwards;
-}
-
-@keyframes cardHoverGrow {
-    0% { width: 44%; }
-    100% { width: 60%;}
-}
-
 #project-card a {
     display: flex;
     flex-direction: column;
