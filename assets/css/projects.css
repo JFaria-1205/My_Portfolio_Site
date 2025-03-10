@@ -138,3 +138,14 @@
     padding-bottom: 4em;
 }
 
+/* Breakpoints */
+@media only screen and (max-width: 768px) {
+    #project-card-container {
+        flex-direction: column;
+        gap: 3em;
+        padding-bottom: 3em;
+    }
+    #project-card {
+        width: 100%;
+    }
+}
