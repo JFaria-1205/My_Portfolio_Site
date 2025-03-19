@@ -40,9 +40,7 @@ async function onHoverEnter(element) {
     
 }
 
-function onHoverExit(element) {
-
-    
+function onHoverExit(element) {    
 
     if (window.innerWidth > 768) {
         // do this if px width is higher than 768

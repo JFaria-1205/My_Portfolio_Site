@@ -172,23 +172,26 @@ body {
     border-right: 0.25em solid wheat;;
     background-color: rgb(12, 12, 12, 1);
 }
-p {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    font-weight: 400;
-}
 h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    padding: 1em 0em;
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 5rem;
     text-align: center;
-    font-weight: 150;
     color: wheat;
 }
 h2 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-    text-align: center;   
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+    text-align: center;
     font-weight: 200;
+}
+p {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+    width: 75%;
+    justify-self: center;
 }
 div {
     justify-self: center;
@@ -211,7 +214,13 @@ div {
     50% {opacity: 1;}
     100% {opacity: 0.4;}
 }
-
+hr {
+    padding: 1.5px;
+    width: 100%;
+    justify-self: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff3b0a, #ffffff);
+}
 
 /* End General Setup */
 
