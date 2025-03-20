@@ -2,10 +2,6 @@
     width: 80%;
 }
 
-#opening-text {
-    font-size: 4.5rem;
-}
-
 .custom-horizontal-line {
     width: 75%;
     padding: 3em;
@@ -88,16 +84,23 @@ h2 {
     align-self: center;
 }
 
-#sec-5-images {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#krita-parentheses {
+    font-style: italic;
+    color: #ffb3a1;
+    font-weight: 300;
 }
 
-#sec-5-images img {
-    width: 60%;
-    align-self: center;
-    padding: 1em;
+#krita-parentheses span{
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+}
+
+#krita-link {
+    color: wheat;
+}
+
+#krita-link:hover{
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -138,9 +141,6 @@ h2 {
         flex-direction: column;
     }
     #sec-4-images img {
-        width: 70%;
-    }
-    #sec-5-images img {
         width: 70%;
     }
     #github-button a {
