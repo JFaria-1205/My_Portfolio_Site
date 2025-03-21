@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     //#endregion
-      updateNavCurrentPage();
+    
+    updateNavCurrentPage();
 });
 
 
@@ -146,4 +147,3 @@ document.addEventListener("DOMContentLoaded", () => {
     elementsFadeLeft.forEach(element => observer.observe(element));
     elementsFadeRight.forEach(element => observer.observe(element));
 });
-

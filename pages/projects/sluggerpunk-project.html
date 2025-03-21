@@ -60,15 +60,17 @@
             <div id="overview">
                 <h2>Overview</h2>
                 <p>
-                    As part of the IS601 Web Systems Development course in my Master of Science program at NJIT, I collaborated with a teammate to design and build a fully functional e-commerce website using Django. The project involved creating a dynamic store where users could browse products, register accounts, and complete transactions. We developed the site from the ground up using HTML, CSS, JavaScript, Python, Django, and SQL, focusing on both frontend presentation and backend functionality.
+                    Step into the electrifying world of 'Sluggerpunk,' a dynamic roguelike game crafted during my Bachelor of Science capstone project. Developed over four intense months by a dedicated team of six, including myself, the game was brought to life using Unreal Engine 4.27. Drawing inspiration from renowned titles like 'Hades,' 'Gunfire Reborn,' and 'Risk of Rain 2,' 'Sluggerpunk' delivers a heart-pounding roguelike experience with randomized room layouts, diverse enemies, and epic boss encounters every five rooms. Players navigate through a series of challenging rooms, earning upgrades to enhance their abilities and face progressively tougher foes. My primary role as the systems and technical designer focused on building and refining core game systems to deliver an immersive and dynamic gameplay experience.
                 </p>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-2">
-                <h2>User Authentication & Security</h2>
+                <h2>Health and Shield System</h2>
                 <p>
-                    I was responsible for implementing the user authentication system. This included designing and programming the login page, handling credential storage and verification, and creating new user accounts. I incorporated client-side checks using JavaScript and server-side validation with Python to ensure secure and accurate user data handling. This system supported user registration, login, and session management.
+                    One of the foundational components I developed was the versatile health and shield system, which serves as the backbone of the game's combat mechanics. This system was designed with adaptability in mind, allowing for seamless integration across various in-game entities, including players, basic enemies, elite adversaries, and formidable bosses.
+                    <br><br>
+                    The shield system features comprehensive customization options, including toggles for enabling or disabling shields, controlling damage direction, and managing shield regeneration behaviors. Parameters such as 'max shield,' 'shield recharge rate,' and 'shield recharge timer' can be fine-tuned to suit different gameplay scenarios. The health system mirrors this flexibility, offering adjustable values for 'max health,' 'instant health gain/loss,' and regeneration rates. This system also includes logic for managing incoming damage, healing, and a 'Died' state that triggers critical gameplay elements like animations, sound effects, and loot drops upon an entity's death.
                 </p>
                 <div id="sec-2-images">
                     <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
@@ -78,9 +80,13 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-3">
-                <h2>Database Integration</h2>
+                <h2>Enemy Difficulty Scaling</h2>
                 <p>
-                    I set up and managed the backend database using Django's ORM (Object-Relational Mapping). This involved creating models for user data, products, and transactions while ensuring smooth data flow between the frontend and backend. I verified that all user inputs were accurately stored and retrieved, maintaining data integrity throughout the application.
+                    To maintain a balanced yet challenging experience, I designed a comprehensive enemy difficulty scaling system with distinct approaches for the game's story and endless modes.
+                    <br><br>
+                    In the story mode, enemy health and damage scaling gradually increase to acclimate players. The first five rooms act as tutorials with static enemy stats, while rooms 6 through 15 increase enemy health incrementally until a cap is reached. Damage scales in three phases to maintain a fair difficulty curve. In the endless mode, enemy health scales dynamically using a combination of a flat base increase and a percentage-based multiplier. This dual-scaling approach ensures a gradual yet relentless increase in challenge while preventing enemies from becoming overwhelmingly powerful.
+                    <br><br>
+                    Enemy damage in endless mode follows a simpler model, with a flat increase per room that is capped to avoid one-hit scenarios. This balance maintains the game's challenging nature while preserving player survivability.
                 </p>
                 <div id="sec-3-images">
                     <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
@@ -90,9 +96,13 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-4">
-                <h2>Product Filtering System</h2>
+                <h2>Level Manager</h2>
                 <p>
-                    I implemented a robust product filtering system that allows users to search and refine product listings by name, type, and price. Users can mix and match these criteria to narrow down their search results efficiently. This feature was built using Django's query filtering methods, ensuring fast and accurate filtering across the product database while maintaining a responsive and user-friendly interface.
+                    At the heart of 'Sluggerpunk' is the Level Manager, a complex system orchestrating the game's randomized progression and room dynamics. This system spans over 10 interconnected blueprints, working together to deliver the unpredictable and immersive essence of the roguelike genre.
+                    <br><br>
+                    The Level Manager initiates each stage with an Entrance Train sequence, immersing players from the outset. Upon arrival, the manager evaluates the room type: enemy room, boss room, or rest area. For combat rooms, it dynamically spawns enemies based on blueprint parameters, tracks their status, and concludes the room once all enemies are defeated.
+                    <br><br>
+                    Upon completion, the Level Manager spawns randomized upgrades at designated points, allowing players to enhance their abilities. Players then board the Exit Train, triggering a seamless level transition managed by the game instance, which preserves critical game data between levels. This intricate system ensures a smooth, randomized gameplay experience while maintaining consistency throughout the game.
                 </p>
                 <div id="sec-4-images">
                     <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
@@ -102,24 +112,32 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-5">
-                <h2>UI Design & Navigation</h2>
+                <h2>Version Control & Documentation</h2>
                 <p>
-                    I led the styling and design efforts, selecting the project's color scheme and establishing a cohesive visual theme across all pages. I also developed a sticky navigation bar, which served as a consistent template across the website for seamless user navigation. This reusable component improved the user experience by providing quick access to key areas of the site.
+                    We utilized Perforce for version control throughout the project. As the technical lead, I was responsible for managing versions, handling reverts, and resolving issues related to version control. Additionally, we used the Atlassian suite, including Confluence and Jira, for documentation and task management. This ensured clear communication, efficient tracking of development progress, and smooth collaboration among team members.
                 </p>
-                <div id="sec-5-images">
-                    <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
-                    <img id="ui-2-pic" src="../../assets/images/django-project-images/ui design 2.png">
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="gameplay-section">
+                <h2>Gameplay Video</h2>
+                <div class="video-container">
+                    <video id="gameplay-video" controls class="large-controls">
+                        <source src="../../assets/videos/featured-video-fixed.webm" type="video/webm">
+                        <source src="../../assets/videos/featured-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
-            <div id="github-section">
-                <h2>It's on Github!</h2>
+            <div id="play-section">
+                <h2>Can I Play the Game?</h2>
                 <p>
-                    We utilized GitHub for version control, enabling seamless collaboration, precise tracking of changes, and maintaining a detailed development history. The full project is available on GitHub for those interested in exploring the code.
+                    Sure! We've uploaded the final capstone build on itch.io.
                 </p>
-                <div id="github-button">
-                    <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>
+                <div id="itchio-button">
+                    <a href="https://artbydaelok.itch.io/sluggerpunk" target="_blank">View on<br>Itch.io</a>
                 </div>                
             </div>
 
