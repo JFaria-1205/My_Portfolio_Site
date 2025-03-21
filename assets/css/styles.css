@@ -215,7 +215,7 @@ div {
     100% {opacity: 0.4;}
 }
 hr {
-    padding: 2px;
+    padding: 1.25px;
     width: 100%;
     justify-self: center;
     align-items: center;

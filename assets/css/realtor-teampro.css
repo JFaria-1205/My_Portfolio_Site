@@ -16,6 +16,35 @@ h2 {
     width: 90%;
 }
 
+#view-site-button {
+    display: flex;
+    justify-content: center;
+    align-self: self-start;
+}
+
+#view-site-button a {
+    min-width: 10em;
+    padding: 1em 2em;
+    border-radius: 1em;
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    background: linear-gradient(
+        160deg,
+        rgb(91, 33, 19) 5%,
+        rgb(242, 97, 63) 100%);
+    color: white;
+    text-align: center;
+    pointer-events: auto;
+}
+
+#view-site-button a:hover {
+    color: white;
+    background-color: wheat;
+    font-weight: 500;
+    animation: growButtons 0.1s ease-in-out forwards;
+}
+
 #github-button {
     padding-bottom: 3em;
     display: flex;
@@ -84,16 +113,46 @@ h2 {
     align-self: center;
 }
 
-#sec-5-images {
+#bottom-nav-buttons {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-self: self-start;
+    gap: 20%;
+    padding-bottom: 3em;
+    width: 100%;
 }
 
-#sec-5-images img {
-    width: 60%;
-    align-self: center;
-    padding: 1em;
+#bottom-nav-buttons a {
+    min-width: 6.5em;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    background: linear-gradient(
+        160deg,
+        rgb(91, 33, 19) 5%,
+        rgb(242, 97, 63) 100%);
+    color: white;
+    text-align: center;
+    pointer-events: auto;
+}
+
+#bottom-nav-buttons a:hover {
+    font-weight: 500;
+    animation: growButtons 0.1s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 1200px) {
+    #bottom-nav-buttons {
+        gap: 15%
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #bottom-nav-buttons {
+        gap: 10%
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -108,7 +167,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     h2 {
         font-size: 2.5rem;
@@ -136,14 +195,19 @@ h2 {
     #sec-4-images img {
         width: 70%;
     }
-    #sec-5-images img {
-        width: 70%;
-    }
-    #github-button a {
+    #view-site-button a {
         font-size: 1.5rem;
         line-height: 1.75rem;
     }
     .custom-horizontal-line {
         width: 100%;
+    }
+    #bottom-nav-buttons {
+        gap: 5%
+    }
+    #bottom-nav-buttons a {
+        min-width: 5em;
+        font-size: 1rem;
+        line-height: 1.25rem;
     }
 }

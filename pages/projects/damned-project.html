@@ -24,6 +24,7 @@
         <!-- Stylesheet -->
         <link rel="stylesheet" href="../../assets/css/output.css">
         <link rel="stylesheet" href="../../assets/css/styles.css">
+        <link rel="stylesheet" href="../../assets/css/damned.css">
 
         <!-- Font Import -->
         <style>@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap');</style>
@@ -34,7 +35,7 @@
         <script src="../../assets/js/preloader-animations.js"></script>
         <link rel="preload" as="image" href="../../assets/images/spaceship-smoke-1.png"> <!-- ensures spaceship image is preloaded -->
 
-        <title>Jason Faria | Portfolio</title>
+        <title>JF | Damned Project</title>
     </head>
 
     <body>
@@ -47,7 +48,87 @@
         </div>
         
         <div id="body-container" class="hidden"> 
-            <h1>Damned</h1>
+            <h1 id="opening-text">Damned</h1>
+            <div id="featured-video-sizing">
+                <video id="featured-video" autoplay loop muted playsinline poster="../../assets/images/featured-poster.jpg">
+                    <!-- <source src="../../assets/videos/featured-video-fixed.webm" type="video/webm"> -->
+                    <source src="../../assets/videos/Django-Project-Short.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="overview">
+                <h2>Overview</h2>
+                <p>
+                    As part of the IS601 Web Systems Development course in my Master of Science program at NJIT, I collaborated with a teammate to design and build a fully functional e-commerce website using Django. The project involved creating a dynamic store where users could browse products, register accounts, and complete transactions. We developed the site from the ground up using HTML, CSS, JavaScript, Python, Django, and SQL, focusing on both frontend presentation and backend functionality.
+                </p>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="section-2">
+                <h2>User Authentication & Security</h2>
+                <p>
+                    I was responsible for implementing the user authentication system. This included designing and programming the login page, handling credential storage and verification, and creating new user accounts. I incorporated client-side checks using JavaScript and server-side validation with Python to ensure secure and accurate user data handling. This system supported user registration, login, and session management.
+                </p>
+                <div id="sec-2-images">
+                    <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
+                    <img id="register-pic" src="../../assets/images/django-project-images/register page.png">
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="section-3">
+                <h2>Database Integration</h2>
+                <p>
+                    I set up and managed the backend database using Django's ORM (Object-Relational Mapping). This involved creating models for user data, products, and transactions while ensuring smooth data flow between the frontend and backend. I verified that all user inputs were accurately stored and retrieved, maintaining data integrity throughout the application.
+                </p>
+                <div id="sec-3-images">
+                    <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
+                    <img id="db-2-pic" src="../../assets/images/django-project-images/database 2.png">
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="section-4">
+                <h2>Product Filtering System</h2>
+                <p>
+                    I implemented a robust product filtering system that allows users to search and refine product listings by name, type, and price. Users can mix and match these criteria to narrow down their search results efficiently. This feature was built using Django's query filtering methods, ensuring fast and accurate filtering across the product database while maintaining a responsive and user-friendly interface.
+                </p>
+                <div id="sec-4-images">
+                    <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
+                    <img id="filter-2-pic" src="../../assets/images/django-project-images/filter example 2.png">
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="section-5">
+                <h2>UI Design & Navigation</h2>
+                <p>
+                    I led the styling and design efforts, selecting the project's color scheme and establishing a cohesive visual theme across all pages. I also developed a sticky navigation bar, which served as a consistent template across the website for seamless user navigation. This reusable component improved the user experience by providing quick access to key areas of the site.
+                </p>
+                <div id="sec-5-images">
+                    <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
+                    <img id="ui-2-pic" src="../../assets/images/django-project-images/ui design 2.png">
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="github-section">
+                <h2>It's on Github!</h2>
+                <p>
+                    We utilized GitHub for version control, enabling seamless collaboration, precise tracking of changes, and maintaining a detailed development history. The full project is available on GitHub for those interested in exploring the code.
+                </p>
+                <div id="github-button">
+                    <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>
+                </div>                
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="bottom-nav-buttons">
+                <a href="ring-force-project.html">Previous<br>Project</a>
+                <a href="../projects.html">Back to All<br>Projects</a>
+                <a href="django-project.html">Next<br>Project</a>
+            </div> 
         </div>
     </body>
 
