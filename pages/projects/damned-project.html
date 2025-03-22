@@ -60,15 +60,37 @@
             <div id="overview">
                 <h2>Overview</h2>
                 <p>
-                    As part of the IS601 Web Systems Development course in my Master of Science program at NJIT, I collaborated with a teammate to design and build a fully functional e-commerce website using Django. The project involved creating a dynamic store where users could browse products, register accounts, and complete transactions. We developed the site from the ground up using HTML, CSS, JavaScript, Python, Django, and SQL, focusing on both frontend presentation and backend functionality.
+                    Welcome to Damned, a heart-pounding horror experience meticulously crafted using Unreal Engine 4.27. This nightmarish journey began during a local 24-hour game jam, where the theme "Night is Coming" inspired the game's eerie foundation. Since then, I have continued to evolve and expand the project, turning it into a fully realized, immersive horror adventure.
+                    <br><br>
+                    In Damned, players face a relentless roguelike challenge set within a mysterious forest clearing. The objective is simple but terrifying: survive the encroaching darkness by gathering essential items each night. With each passing day, the difficulty escalates, increasing the tension and stakes. Should the player fail to collect the necessary resources, a relentless monster emerges to hunt them down, leading to a chilling and permanent end to their run.
                 </p>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-2">
-                <h2>User Authentication & Security</h2>
+                <h2>Experience System</h2>
                 <p>
-                    I was responsible for implementing the user authentication system. This included designing and programming the login page, handling credential storage and verification, and creating new user accounts. I incorporated client-side checks using JavaScript and server-side validation with Python to ensure secure and accurate user data handling. This system supported user registration, login, and session management.
+                    The XP and leveling system in Damned is designed to provide a balanced and rewarding progression experience. It scales alongside the game's increasing difficulty to ensure a fair yet challenging curve for players.
+                    <br><br>
+                    <b><u>XP Gain</u></b>
+                    <br>
+                    Experience is awarded at the end of each night based on a formula that scales with the game's difficulty:
+                    <br><br>
+                    <span style="font-size: 1.65rem;"><b>- Base XP per Night:</b> 100 XP</span>
+                    <br>
+                    <span style="font-size: 1.65rem;"><b>- Scaling Multiplier:</b> Each night's XP is increased by 10% of the previous night's XP, rounded to the nearest integer.</span>
+                    <br><br>
+                    This dynamic system means that as the game grows harder, players are rewarded with greater XP, reflecting their endurance and skill in surviving the escalating dangers.
+                    <br><br>
+                    <b><u>Leveling System</u></b>
+                    <br>
+                    The leveling system works in harmony with the XP gain, ensuring steady progression while maintaining a rising challenge.
+                    <br><br>
+                    <span style="font-size: 1.65rem;"><b>- Base XP for Level 1:</b> 500 XP</span>
+                    <br>
+                    <span style="font-size: 1.65rem;"><b>- Level Requirement Formula:</b> Each subsequent level requires the previous level's XP multiplied by 1.1, plus a flat increase of 200 XP.</span>
+                    <br><br>
+                    This combination of multiplicative and additive growth ensures a smooth early progression with increasing difficulty over time.
                 </p>
                 <div id="sec-2-images">
                     <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
@@ -78,9 +100,9 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-3">
-                <h2>Database Integration</h2>
+                <h2>Player Progression</h2>
                 <p>
-                    I set up and managed the backend database using Django's ORM (Object-Relational Mapping). This involved creating models for user data, products, and transactions while ensuring smooth data flow between the frontend and backend. I verified that all user inputs were accurately stored and retrieved, maintaining data integrity throughout the application.
+                    On average, players typically survive nights 3-5 during their first attempt. Each upgrade extends their survival time by approximately 2-3 nights, offering a tangible sense of growth. The game also introduces a degree of randomness, occasionally clustering essential items together to provide moments of relief and enhance the overall gameplay variety.
                 </p>
                 <div id="sec-3-images">
                     <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
@@ -90,9 +112,27 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-4">
-                <h2>Product Filtering System</h2>
+                <h2>Upgrade System</h2>
                 <p>
-                    I implemented a robust product filtering system that allows users to search and refine product listings by name, type, and price. Users can mix and match these criteria to narrow down their search results efficiently. This feature was built using Django's query filtering methods, ensuring fast and accurate filtering across the product database while maintaining a responsive and user-friendly interface.
+                    The upgrade system in Damned is designed to be simple yet impactful, empowering players to improve their resource-gathering efficiency over time.
+                    <br><br>
+                    <b><u>Upgrade Costs</u></b>
+                    <br><br>
+                    <span style="font-size: 1.65rem;"><b>- Level 1 Cost:</b> 1 Upgrade Token</span>
+                    <br>
+                    <span style="font-size: 1.65rem;"><b>- Subsequent Levels:</b> Each additional level costs one more token than the previous level.</span>
+                    <br><br>
+                    For example, upgrading the wood resource from Level 1 to Level 2 increases the wood yield from 1 per tree to 2 per tree and costs 1 upgrade token. Each subsequent level follows this pattern, allowing players to boost their efficiency progressively.
+                    <br><br>
+                    <b><u>Upgrade UI</u></b>
+                    <br>
+                    The game's user interface is crafted for intuitive navigation and ease of use. Players can interact with the upgrade menu through a simple click-and-hold mechanism:
+                    <br><br>
+                    <span style="font-size: 1.65rem;"><b>- Click-and-Hold:</b> Advances the upgrade level if the player has sufficient upgrade tokens.</span>
+                    <br>
+                    <span style="font-size: 1.65rem;"><b>- Upgrade Display:</b> Clearly shows the player's current upgrade level and the next available upgrade.</span>
+                    <br><br>
+                    Additionally, the UI displays real-time information on the player's current level, their progress toward the next level, and the number of available upgrade tokens. This transparent design ensures players are always informed and in control of their growth.
                 </p>
                 <div id="sec-4-images">
                     <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
@@ -102,25 +142,16 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-5">
-                <h2>UI Design & Navigation</h2>
+                <h2>Final Thoughts</h2>
                 <p>
-                    I led the styling and design efforts, selecting the project's color scheme and establishing a cohesive visual theme across all pages. I also developed a sticky navigation bar, which served as a consistent template across the website for seamless user navigation. This reusable component improved the user experience by providing quick access to key areas of the site.
+                    Damned is a constantly evolving horror experience that blends intense survival mechanics with a rewarding progression system. Through carefully balanced XP calculations, a fair leveling curve, and an intuitive upgrade system, players are immersed in a terrifying world where every decision counts.
+                    <br><br>
+                    As development continues, I am excited to further expand the game's mechanics and narrative, delivering an even more compelling and chilling journey for players brave enough to face the darkness.
                 </p>
                 <div id="sec-5-images">
                     <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
                     <img id="ui-2-pic" src="../../assets/images/django-project-images/ui design 2.png">
                 </div>
-            </div>
-
-            <div class="custom-horizontal-line"><hr></div>
-            <div id="github-section">
-                <h2>It's on Github!</h2>
-                <p>
-                    We utilized GitHub for version control, enabling seamless collaboration, precise tracking of changes, and maintaining a detailed development history. The full project is available on GitHub for those interested in exploring the code.
-                </p>
-                <div id="github-button">
-                    <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>
-                </div>                
             </div>
 
             <div class="custom-horizontal-line"><hr></div>

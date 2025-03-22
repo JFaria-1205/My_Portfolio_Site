@@ -16,32 +16,6 @@ h2 {
     width: 90%;
 }
 
-#github-button {
-    display: flex;
-    justify-content: center;
-    align-self: self-start;
-}
-#github-button a {
-    min-width: 10em;
-    padding: 1em 2em;
-    border-radius: 1em;
-    font-weight: 200;
-    font-size: 2rem;
-    line-height: 2.25rem;
-    background: linear-gradient(
-        160deg,
-        rgb(91, 33, 19) 5%,
-        rgb(242, 97, 63) 100%);
-    color: white;
-    text-align: center;
-    pointer-events: auto;
-}
-#github-button a:hover {
-    color: white;
-    background-color: wheat;
-    font-weight: 500;
-    animation: growButtons 0.1s ease-in-out forwards;
-}
 @keyframes growButtons {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
@@ -179,10 +153,6 @@ h2 {
     }
     #sec-5-images img {
         width: 70%;
-    }
-    #github-button a {
-        font-size: 1.5rem;
-        line-height: 1.75rem;
     }
     .custom-horizontal-line {
         width: 100%;

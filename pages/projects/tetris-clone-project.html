@@ -60,15 +60,21 @@
             <div id="overview">
                 <h2>Overview</h2>
                 <p>
-                    As part of the IS601 Web Systems Development course in my Master of Science program at NJIT, I collaborated with a teammate to design and build a fully functional e-commerce website using Django. The project involved creating a dynamic store where users could browse products, register accounts, and complete transactions. We developed the site from the ground up using HTML, CSS, JavaScript, Python, Django, and SQL, focusing on both frontend presentation and backend functionality.
+                    Tetris. It's a classic, right? Everyone's played it, seen it, or at least heard of it, so, I decided to make my own version. The idea to make this actually sparked when I downloaded the mobile version of Tetris and got fed up with the constant invasive ads. Pay 2 bucks to remove the ads, or just spend a month making the entire game yourself so you don't have to deal with ads. I mean... it's clearly a no-brainer.
                 </p>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-2">
-                <h2>User Authentication & Security</h2>
+                <h2>How Does <i>My</i> Tetris Work?</h2>
                 <p>
-                    I was responsible for implementing the user authentication system. This included designing and programming the login page, handling credential storage and verification, and creating new user accounts. I incorporated client-side checks using JavaScript and server-side validation with Python to ensure secure and accurate user data handling. This system supported user registration, login, and session management.
+                    The game mechanics are pretty standard for Tetris. Tetrominos fall from the top to the bottom of the play area, and you can move them sideways and rotate them. When a tetromino lands, if it completes a row, that row clears, and you earn points. As you clear more rows, the game speeds up, making it more challenging. The goal is simple: keep the tetrominos from stacking up to the top of the play area for as long as possible. Classic Tetris fun, full of speed and strategy!
+                    <br><br>
+                    Working on this project was a blast. It was fun, for sure, but it also opened my eyes to the fact that even seemingly small projects can present some major challenges.
+                    <br><br>
+                    At the core of the game is the fundamental gameplay loop: a tetromino spawns, falls, and locks in place when it reaches the bottom or another piece. This triggers the appearance of the next randomized piece, and the cycle repeats. Mastering this loop was crucial—it’s the heartbeat of Tetris, driving everything from movement to row clearing to increasing difficulty levels. Every mechanic builds on this foundation, shaping the rhythm and strategy that make the game so engaging.
+                    <br><br>
+                    With a variety of mechanics to implement, each offering its own set of challenges, I tackled some of the standout features in Unity. From the classic tetromino movement to row clearing and increasing difficulty levels, I dove into the intricacies of game development to bring these elements to life.
                 </p>
                 <div id="sec-2-images">
                     <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
@@ -78,9 +84,11 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-3">
-                <h2>Database Integration</h2>
+                <h2>Spawning Tetrominoes</h2>
                 <p>
-                    I set up and managed the backend database using Django's ORM (Object-Relational Mapping). This involved creating models for user data, products, and transactions while ensuring smooth data flow between the frontend and backend. I verified that all user inputs were accurately stored and retrieved, maintaining data integrity throughout the application.
+                    Ensuring consistency in the spawning of tetromino pieces is crucial for maintaining fairness and predictability in gameplay. To achieve this, I meticulously calculated the dimensions of the play area and determined an optimal vector location for tetromino spawning. By anchoring the spawn point within the confines of the play area, I guaranteed that each piece enters the game world with precision and uniformity.
+                    <br><br>
+                    In cases where a piece inadvertently spawned too high up, potentially breaching the boundaries of the play area, I implemented a fail-safe mechanism. This mechanism automatically detects such occurrences and swiftly adjusts the position of the piece downward, ensuring it remains within the designated playable space. This proactive approach not only mitigates potential disruptions to gameplay but also enhances the overall fluidity and integrity of the Tetris experience.
                 </p>
                 <div id="sec-3-images">
                     <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
@@ -90,9 +98,11 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-4">
-                <h2>Product Filtering System</h2>
+                <h2>Tetromino Locking In Place</h2>
                 <p>
-                    I implemented a robust product filtering system that allows users to search and refine product listings by name, type, and price. Users can mix and match these criteria to narrow down their search results efficiently. This feature was built using Django's query filtering methods, ensuring fast and accurate filtering across the product database while maintaining a responsive and user-friendly interface.
+                    The locking of tetrominos in place is crucial for maintaining the Tetris game loop, ensuring its continuous flow and challenge. Each tetromino is constructed by combining four single block prefabs, each representing a 1x1 unit block. The play area is a 10x20 grid surrounded by bounds implemented as 2D box colliders labeled as 'bounds'.
+                    <br><br>
+                    Collision detection is performed before every movement, and if a downward collision is detected, the tetromino locks in place. Once a tetromino is locked, all its blocks are labeled as 'bounds' to prevent overlap. I also implemented a last-second move delay of 16 milliseconds, allowing for last-minute player adjustments before locking occurs.
                 </p>
                 <div id="sec-4-images">
                     <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
@@ -102,9 +112,11 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-5">
-                <h2>UI Design & Navigation</h2>
+                <h2>Movement</h2>
                 <p>
-                    I led the styling and design efforts, selecting the project's color scheme and establishing a cohesive visual theme across all pages. I also developed a sticky navigation bar, which served as a consistent template across the website for seamless user navigation. This reusable component improved the user experience by providing quick access to key areas of the site.
+                    Handling the rotational movement of tetrominos presented a significant challenge. Left and right movements were straightforward using casts, but rotations required additional checks to prevent pieces from moving out of bounds. For example, the I-piece had to be adjusted if it extended beyond the play area's limits.
+                    <br><br>
+                    I implemented a series of checks to attempt the desired rotation, try the opposite direction if blocked, and ultimately cancel the rotation if no valid position was found. This intricate system involved approximately 150 lines of code to handle all possible rotation scenarios smoothly.
                 </p>
                 <div id="sec-5-images">
                     <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
@@ -113,10 +125,36 @@
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
-            <div id="github-section">
-                <h2>It's on Github!</h2>
+            <div id="section-6">
+                <h2>Point System</h2>
                 <p>
-                    We utilized GitHub for version control, enabling seamless collaboration, precise tracking of changes, and maintaining a detailed development history. The full project is available on GitHub for those interested in exploring the code.
+                    The point system detects completed rows through ray casts after a tetromino locks in place. If 10 blocks fill a row, it is removed, and any blocks above it are shifted downwards. Points are awarded based on the number of rows cleared at once (up to 4 rows with the I-piece). For every 10 rows cleared, the game level increases by 1, accelerating the tetromino's descent.
+                </p>
+                <div id="sec-6-images">
+                    <img id="sec6-pic-1" src="../../assets/images/django-project-images/ui design.png">
+                    <img id="sec6-pic-2" src="../../assets/images/django-project-images/ui design 2.png">
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="gameplay-section">
+                <h2>Gameplay Video</h2>
+                <div class="video-container">
+                    <video id="gameplay-video" controls class="large-controls">
+                        <source src="../../assets/videos/featured-video-fixed.webm" type="video/webm">
+                        <source src="../../assets/videos/featured-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="github-section">
+                <h2>Version Control & Documentation</h2>
+                <p>
+                    I used GitHub for version control while working on the Tetris project. This allowed me to track changes, revert to previous versions when necessary, and maintain a clean, organized development process.
+                    <br><br>
+                    All of the game files are on GitHub, including a downloadable build that you can try out if you'd like!
                 </p>
                 <div id="github-button">
                     <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>

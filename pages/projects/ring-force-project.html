@@ -60,15 +60,21 @@
             <div id="overview">
                 <h2>Overview</h2>
                 <p>
-                    As part of the IS601 Web Systems Development course in my Master of Science program at NJIT, I collaborated with a teammate to design and build a fully functional e-commerce website using Django. The project involved creating a dynamic store where users could browse products, register accounts, and complete transactions. We developed the site from the ground up using HTML, CSS, JavaScript, Python, Django, and SQL, focusing on both frontend presentation and backend functionality.
+                    "Ring Force" is one of my most exciting and ambitious projects to date. It originally began as a simple endless runner where players controlled a cube, moving side to side to dodge walls. This early version was based on a tutorial I followed to create a basic game, and as one of my first projects, I was quite proud of it.
+                    <br><br>
+                    Eight years later, I stumbled upon the old project files and decided to revamp it with my current knowledge of game development. The game has now evolved into an immersive experience where players pilot a spaceship through a planet’s rings, skillfully dodging asteroids and lasers. Revisiting and transforming this project has been a rewarding journey, highlighting my growth and skills in game development.
                 </p>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-2">
-                <h2>User Authentication & Security</h2>
+                <h2>Endless Game Mode</h2>
                 <p>
-                    I was responsible for implementing the user authentication system. This included designing and programming the login page, handling credential storage and verification, and creating new user accounts. I incorporated client-side checks using JavaScript and server-side validation with Python to ensure secure and accurate user data handling. This system supported user registration, login, and session management.
+                    The core gameplay revolves around an endless mode where players navigate a constantly evolving environment filled with hazards. I created a platform prefab with obstacle spawn points to implement the endless game mode. As the player progresses, each platform prefab has a trigger in the middle that spawns a new platform while removing old ones behind the player, keeping the level uncluttered and efficient.
+                    <br><br>
+                    Each platform consists of 4-5 rows, each with five spawn points for walls or obstacles. The number of obstacles spawned varies depending on the player's progress, ranging from 1 to 4. This system ensures there is always a path for the player to pass through. Once the player reaches the threshold to allow spawning four obstacles, a system randomly spawns 2-4 obstacles instead of always spawning four, adding more gameplay variety.
+                    <br><br>
+                    These dynamic platforms and randomly generated obstacles work together to create a truly endless game mode with engaging randomization.
                 </p>
                 <div id="sec-2-images">
                     <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
@@ -78,9 +84,15 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-3">
-                <h2>Database Integration</h2>
+                <h2>Power-Ups</h2>
                 <p>
-                    I set up and managed the backend database using Django's ORM (Object-Relational Mapping). This involved creating models for user data, products, and transactions while ensuring smooth data flow between the frontend and backend. I verified that all user inputs were accurately stored and retrieved, maintaining data integrity throughout the application.
+                    I introduced power-ups to assist the player in navigating the increasingly challenging environment. Each power-up has a chance to randomly spawn at a platform's obstacle spawn point instead of a wall. To maintain balance and prevent an excess of power-ups, only one power-up can spawn per platform.
+                    <br><br>
+                    <b>Shield:</b> Grants the player temporary protection. In the updated version, the shield is represented by a transparent, blue-tinted version of the ship model. It absorbs one hit and deflects the obstacle into orbit.
+                    <br><br>
+                    <b>Bomb:</b> Instantly clears the next few basic obstacles in the player's path, providing a brief respite from the constant challenges.
+                    <br><br>
+                    Over time, I refined and balanced these power-ups to fit the new mechanics introduced in the more advanced versions of the game.
                 </p>
                 <div id="sec-3-images">
                     <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
@@ -90,9 +102,21 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-4">
-                <h2>Product Filtering System</h2>
+                <h2>Enhanced Movement and Obstacle Design</h2>
                 <p>
-                    I implemented a robust product filtering system that allows users to search and refine product listings by name, type, and price. Users can mix and match these criteria to narrow down their search results efficiently. This feature was built using Django's query filtering methods, ensuring fast and accurate filtering across the product database while maintaining a responsive and user-friendly interface.
+                    In the second iteration, I expanded on the core mechanics by adopting a space theme. The player model transformed into a spaceship, and the setting shifted to a planet's rings filled with orbiting meteorites. I also introduced vertical movement alongside the existing horizontal controls, enhancing the gameplay depth.
+                    <br><br>
+                    With the new movement capabilities, I removed the jump power-up as it became redundant. Instead, I focused on designing new obstacle types to provide more diverse challenges:
+                    <br><br>
+                    <b>Basic Obstacles:</b> Transformed from cube walls into red meteorites that align with the space theme. These obstacles feature randomized rotations for increased visual variety.
+                    <br><br>
+                    <b>Magnetic Rocks:</b> Pairs of rocks that attract each other when the player approaches, narrowing the available path.
+                    <br><br>
+                    <b>Mines:</b> Explosive obstacles that detonate in a 3x3 area if the player comes too close.
+                    <br><br>
+                    <b>Laser Line Enemy:</b> Fires a continuous laser beam across a specific row or column, restricting the player’s movement options.
+                    <br><br>
+                    These new obstacles, combined with enhanced movement, significantly increased the game's complexity and engagement.
                 </p>
                 <div id="sec-4-images">
                     <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
@@ -102,9 +126,42 @@
 
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-5">
-                <h2>UI Design & Navigation</h2>
+                <h2>Dynamic Score System</h2>
                 <p>
-                    I led the styling and design efforts, selecting the project's color scheme and establishing a cohesive visual theme across all pages. I also developed a sticky navigation bar, which served as a consistent template across the website for seamless user navigation. This reusable component improved the user experience by providing quick access to key areas of the site.
+                    The score system evolved alongside the gameplay. In the original version, the score was based on the player's 'z' position, which did not account for player speed or power-up effects. To address this, I developed a dynamic scoring algorithm:
+                    <br><br>
+                    <b><u>Score Formula:</u></b>
+                    <br>
+                        <span style="font-size: 1.5rem;"><b> <span style="color: rgb(109, 160, 255);">score</span> = 
+                            <span style="color:#00FFF9;">(</span>
+                            <span style="color:#FF4040;">baseScore</span> + 
+                            <span style="color:#E8FF00;">(</span>
+                            <span style="color:#BADA55;">distanceMultiplier</span> * 
+                            <span style="color:#00FF13;">(</span>
+                            log<span style="color:red;">(</span>
+                            <span style="color:hsl(27, 100%, 63%);">distanceTraveled</span> + 1
+                            <span style="color:red;">)</span>
+                            <span style="color:#00FF13;">)</span>
+                            <span style="color:#E8FF00;">)</span>
+                            <span style="color:#00FFF9;">)</span> * 
+                            <span style="color:#00FF13;">Time.deltaTime</span> * 
+                            <span style="color:#FD00FF;">scoreMultiplier</span></b></span>
+                    <br><br>
+                    <b><u>Breakdown:</u></b>
+                        <span style="font-size: 1.5rem; line-height: 1.25rem;">
+                        <br>
+                        <b>1. <span style="color:#FF4040;">baseScore</span>:</b> Ensures a consistent score increase.
+                        <br>
+                        <b>2. <span style="color:#BADA55;">distanceMultiplier</span>:</b> Scales the score based on distance traveled.
+                        <br>
+                        <b>3. log<span style="color:red;">(</span><span style="color:hsl(27, 100%, 63%);">distanceTraveled</span> + 1<span style="color:red;">)</span>:</b> Normalizes score growth, preventing runaway inflation.
+                        <br>
+                        <b>4. <span style="color:#00FF13;">Time.deltaTime</span>:</b> Ensures frame-rate independence.
+                        <br>
+                        <b>5. <span style="color:#FD00FF;">scoreMultiplier</span>:</b> Allows for dynamic score adjustments via power-ups.
+                        </span>
+                    <br><br>
+                    This updated system accurately reflects player performance while allowing flexibility for future mechanics.
                 </p>
                 <div id="sec-5-images">
                     <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
@@ -113,14 +170,48 @@
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
+            <div id="gameplay-section">
+                <h2>Gameplay Video</h2>
+                <div class="video-container">
+                    <video id="gameplay-video" controls class="large-controls">
+                        <source src="../../assets/videos/featured-video-fixed.webm" type="video/webm">
+                        <source src="../../assets/videos/featured-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
             <div id="github-section">
-                <h2>It's on Github!</h2>
+                <h2>Version Control & Documentation</h2>
                 <p>
-                    We utilized GitHub for version control, enabling seamless collaboration, precise tracking of changes, and maintaining a detailed development history. The full project is available on GitHub for those interested in exploring the code.
+                    I used GitHub for version control throughout the development of "Ring Force." This allowed me to track changes, experiment with new features, and quickly revert if necessary. Managing the repository independently gave me full control over the development cycle, ensuring efficient backups and version tracking.
+                    <br><br>
+                    For documentation, I maintained thorough technical notes, including design decisions, system overviews, and formulas. This helped streamline the development process and provided a clear roadmap as the project evolved.
+                    <br><br>
+                    You can download and play "Ring Force" on GitHub and experience the evolution from a simple endless runner to an immersive space adventure.
                 </p>
                 <div id="github-button">
-                    <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>
+                    <a href="https://github.com/JFaria-1205/Ring-Force" target="_blank">View on<br>GitHub</a>
                 </div>                
+            </div>
+
+            <div class="custom-horizontal-line"><hr></div>
+            <div id="future-plans-section">
+                <h2>Future Plans</h2>
+                <p>
+                    I have ambitious plans to continue expanding "Ring Force." Some upcoming features include:
+                    <br><br>
+                    <b>Enemies:</b> Introduce aggressive ships that attack the player, adding an extra layer of challenge.
+                    <br><br>
+                    <b>Player Attacks:</b> Equip the player with offensive capabilities like lasers and projectiles.
+                    <br><br>
+                    <b>More Power-Ups:</b> Implement new power-ups, including a score multiplier and time-slow effect.
+                    <br><br>
+                    <b>Ship Customization:</b> Allow players to personalize their spaceship's appearance and functionality.
+                    <br><br>
+                    <b>Art Style Evolution:</b> Explore a major overhaul of the game's visuals to keep the experience fresh and engaging.
+                </p>
             </div>
 
             <div class="custom-horizontal-line"><hr></div>

@@ -125,6 +125,20 @@ h2 {
     animation: growButtons 0.1s ease-in-out forwards;
 }
 
+#gameplay-section {
+    width: 100%;
+}
+
+#gameplay-video {
+    padding-top: 2em;
+    width: 80%;
+    justify-self: center;
+}
+
+.large-controls {
+    zoom: 1.5;
+}
+
 @media only screen and (max-width: 1200px) {
     #bottom-nav-buttons {
         gap: 15%
