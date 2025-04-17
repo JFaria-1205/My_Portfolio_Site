@@ -1,5 +1,6 @@
-#featured-video-sizing {
-    width: 80%;
+#featured-video {
+    justify-self: center;
+    width: 50vw;
 }
 
 .custom-horizontal-line {
@@ -103,6 +104,9 @@ h2 {
     #bottom-nav-buttons {
         gap: 15%
     }
+    #featured-video {
+        width: 60vw;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -133,8 +137,8 @@ h2 {
         line-height: 1.75rem;
         width: 95%;
     }
-    #featured-video-sizing {
-        width: 90%;
+    #featured-video {
+        width: 75vw;
     }
     #sec-2-images {
         flex-direction: column;
