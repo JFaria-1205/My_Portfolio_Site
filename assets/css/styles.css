@@ -91,7 +91,7 @@ header {
     display: grid;
     justify-self: center; /* Center entire grid */
     justify-items: center; /* Center items inside */
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 #nav-page-links a {
     margin: 0em 0.5em;

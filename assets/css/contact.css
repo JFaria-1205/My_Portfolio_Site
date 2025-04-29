@@ -1,0 +1,51 @@
+h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    width: 85%;
+    justify-self: center;
+}
+
+#body-container {
+    min-height: 90vh;
+}
+
+#bottom-nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-self: self-start;
+    gap: 10%;
+    padding-bottom: 3em;
+    padding-top: 7.5em;
+    width: 75%;
+}
+
+#bottom-nav-buttons a {
+    padding: 0.5em;
+    border-radius: 0.75em;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    background: linear-gradient(
+        160deg,
+        rgb(91, 33, 19) 5%,
+        rgb(242, 97, 63) 100%);
+    color: white;
+    text-align: center;
+    pointer-events: auto;
+}
+
+#bottom-nav-buttons a:hover {
+    font-weight: 500;
+    animation: growButtons 0.1s ease-in-out forwards;
+}
+
+.nav-icon {
+    width: 6em;
+    justify-self: center;
+    border-radius: 1em;
+}
+
+@keyframes growButtons {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}

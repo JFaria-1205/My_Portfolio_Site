@@ -84,18 +84,6 @@ h2 {
     align-self: center;
 }
 
-#sec-5-images {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#sec-5-images img {
-    width: 60%;
-    align-self: center;
-    padding: 1em;
-}
-
 #bottom-nav-buttons {
     display: flex;
     justify-content: center;
@@ -193,9 +181,6 @@ h2 {
         flex-direction: column;
     }
     #sec-4-images img {
-        width: 70%;
-    }
-    #sec-5-images img {
         width: 70%;
     }
     #github-button a {

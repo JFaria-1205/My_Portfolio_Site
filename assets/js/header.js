@@ -9,7 +9,7 @@ if (typeof siteHeader ==="undefined"){
                 <nav id="nav-page-links" class="font-thin z-10">
                     <a href="../../index.html" class="nav_home_link nav-link" onclick="sessionStorage.setItem('skipIntro', 'true')">Home</a>
                     <a href="../../pages/projects.html" class="nav_projects_link nav-link">Projects</a>
-                    <a href="../../pages/resume.html" class="nav_resume_link nav-link">Resume</a>
+                    
                     <a href="../../pages/about.html" class="nav_about_link nav-link">About</a>
                     <a href="../../pages/contact.html" class="nav_contact_link nav-link">Contact</a>
                 </nav>
@@ -24,7 +24,7 @@ if (typeof siteHeader ==="undefined"){
                     <ul id="dropdown-content-mobile">
                         <li><a href="../../index.html" class="nav_home_link" onclick="sessionStorage.setItem('skipIntro', 'true')">Home</a></li>
                         <li><a href="../../pages/projects.html" class="nav_projects_link">Projects</a></li>
-                        <li><a href="../../pages/resume.html" class="nav_resume_link">Resume</a></li>
+                        
                         <li><a href="../../pages/about.html" class="nav_about_link">About</a></li>
                         <li><a href="../../pages/contact.html" class="nav_contact_link">Contact</a></li>
                 </ul>
@@ -34,3 +34,7 @@ if (typeof siteHeader ==="undefined"){
 
     document.body.insertAdjacentHTML('afterbegin', siteHeader);
 }
+
+//<a href="../../pages/resume.html" class="nav_resume_link nav-link">Resume</a>
+
+//<li><a href="../../pages/resume.html" class="nav_resume_link">Resume</a></li>
