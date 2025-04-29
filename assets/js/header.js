@@ -4,7 +4,7 @@ if (typeof siteHeader ==="undefined"){
     `
         <header id="head" class="hidden nav-header sticky items-center">
             <div class="nav-desktop items-center">
-                <a id="nav-name" class="nav-extras font-thin text-lg z-0 text-start" href="../test.html">Jason Faria</a>
+                <a id="nav-name" class="nav-extras font-thin text-lg z-0 text-start" href="../../index.html">Jason Faria</a>
 
                 <nav id="nav-page-links" class="font-thin z-10">
                     <a href="../../index.html" class="nav_home_link nav-link" onclick="sessionStorage.setItem('skipIntro', 'true')">Home</a>
@@ -14,7 +14,7 @@ if (typeof siteHeader ==="undefined"){
                     <a href="../../pages/contact.html" class="nav_contact_link nav-link">Contact</a>
                 </nav>
 
-                <a id="nav-title" class="nav-extras font-thin text-lg text-right z-0" href="../index.html">Portfolio</a>
+                <a id="nav-title" class="nav-extras font-thin text-lg text-right z-0" href="../../pages/projects.html">Portfolio</a>
             </div>
             <div class="nav-mobile">
                 <ul id="nav-small-menu" class="font-thin text-xl z-10 items-center">
