@@ -150,10 +150,10 @@ function runIntroAnimations() {
         bodyContainer.classList.remove("hidden");
         clearInterval(spaceshipLaunchAnimation);
         header.classList.remove("hidden");
-        await delay(1500);
+        await delay(750);
 
         preloader.style.display = "none";
-        await delay(1000);
+        await delay(400);
 
 
         heroVideo.classList.remove("hidden");

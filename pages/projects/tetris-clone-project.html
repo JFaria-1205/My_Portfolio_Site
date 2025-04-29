@@ -67,6 +67,9 @@
             <div class="custom-horizontal-line"><hr></div>
             <div id="section-2">
                 <h2>How Does <i>My</i> Tetris Work?</h2>
+                <div id="sec-2-images">
+                    <img id="sec2-image1" src="../../assets/images/tetris-images/Tetris Menu.png">
+                </div>
                 <p>
                     The game mechanics are pretty standard for Tetris. Tetrominos fall from the top to the bottom of the play area, and you can move them sideways and rotate them. When a tetromino lands, if it completes a row, that row clears, and you earn points. As you clear more rows, the game speeds up, making it more challenging. The goal is simple: keep the tetrominos from stacking up to the top of the play area for as long as possible. Classic Tetris fun, full of speed and strategy!
                     <br><br>
@@ -75,11 +78,7 @@
                     At the core of the game is the fundamental gameplay loop: a tetromino spawns, falls, and locks in place when it reaches the bottom or another piece. This triggers the appearance of the next randomized piece, and the cycle repeats. Mastering this loop was crucial—it’s the heartbeat of Tetris, driving everything from movement to row clearing to increasing difficulty levels. Every mechanic builds on this foundation, shaping the rhythm and strategy that make the game so engaging.
                     <br><br>
                     With a variety of mechanics to implement, each offering its own set of challenges, I tackled some of the standout features in Unity. From the classic tetromino movement to row clearing and increasing difficulty levels, I dove into the intricacies of game development to bring these elements to life.
-                </p>
-                <div id="sec-2-images">
-                    <img id="login-pic" src="../../assets/images/django-project-images/login page.png">
-                    <img id="register-pic" src="../../assets/images/django-project-images/register page.png">
-                </div>
+                </p>                
             </div>
 
             <div class="custom-horizontal-line"><hr></div>
@@ -91,8 +90,12 @@
                     In cases where a piece inadvertently spawned too high up, potentially breaching the boundaries of the play area, I implemented a fail-safe mechanism. This mechanism automatically detects such occurrences and swiftly adjusts the position of the piece downward, ensuring it remains within the designated playable space. This proactive approach not only mitigates potential disruptions to gameplay but also enhances the overall fluidity and integrity of the Tetris experience.
                 </p>
                 <div id="sec-3-images">
-                    <img id="db-1-pic" src="../../assets/images/django-project-images/database.png">
-                    <img id="db-2-pic" src="../../assets/images/django-project-images/database 2.png">
+                    <video id="sec3-gif1" autoplay loop muted playsinline poster="../../assets/images/tetris-images/Tetris Menu.png">
+                        <source src="../../assets/videos/tetris/spawning-tetromino.webm" type="video/webm">
+                    </video>
+                    <script>
+                        document.getElementById("sec3-gif1").playbackRate = 2.5;
+                    </script>
                 </div>
             </div>
 
@@ -105,8 +108,12 @@
                     Collision detection is performed before every movement, and if a downward collision is detected, the tetromino locks in place. Once a tetromino is locked, all its blocks are labeled as 'bounds' to prevent overlap. I also implemented a last-second move delay of 16 milliseconds, allowing for last-minute player adjustments before locking occurs.
                 </p>
                 <div id="sec-4-images">
-                    <img id="filter-1-pic" src="../../assets/images/django-project-images/filter example.png">
-                    <img id="filter-2-pic" src="../../assets/images/django-project-images/filter example 2.png">
+                    <video id="sec4-gif1" autoplay loop muted playsinline poster="../../assets/images/tetris-images/Tetris Menu.png">
+                        <source src="../../assets/videos/tetris/tetromino-locking.webm" type="video/webm">
+                    </video>
+                    <script>
+                        document.getElementById("sec4-gif1").playbackRate = 1.5;
+                    </script>
                 </div>
             </div>
 
@@ -119,8 +126,18 @@
                     I implemented a series of checks to attempt the desired rotation, try the opposite direction if blocked, and ultimately cancel the rotation if no valid position was found. This intricate system involved approximately 150 lines of code to handle all possible rotation scenarios smoothly.
                 </p>
                 <div id="sec-5-images">
-                    <img id="ui-1-pic" src="../../assets/images/django-project-images/ui design.png">
-                    <img id="ui-2-pic" src="../../assets/images/django-project-images/ui design 2.png">
+                    <video id="sec5-gif1" autoplay loop muted playsinline poster="../../assets/images/tetris-images/Tetris Menu.png">
+                        <source src="../../assets/videos/tetris/tetromino-left-right-move.webm" type="video/webm">
+                    </video>
+
+                    <video id="sec5-gif2" autoplay loop muted playsinline poster="../../assets/images/tetris-images/Tetris Menu.png">
+                        <source src="../../assets/videos/tetris/tetromino-rotation.webm" type="video/webm">
+                    </video>
+
+                    <script>
+                        document.getElementById("sec5-gif1").playbackRate = 1.5;
+                        document.getElementById("sec5-gif2").playbackRate = 1.5;
+                    </script>
                 </div>
             </div>
 
@@ -131,8 +148,7 @@
                     The point system detects completed rows through ray casts after a tetromino locks in place. If 10 blocks fill a row, it is removed, and any blocks above it are shifted downwards. Points are awarded based on the number of rows cleared at once (up to 4 rows with the I-piece). For every 10 rows cleared, the game level increases by 1, accelerating the tetromino's descent.
                 </p>
                 <div id="sec-6-images">
-                    <img id="sec6-pic-1" src="../../assets/images/django-project-images/ui design.png">
-                    <img id="sec6-pic-2" src="../../assets/images/django-project-images/ui design 2.png">
+                    <img id="sec6-pic-1" src="../../assets/images/tetris-images/points-pic1.png">
                 </div>
             </div>
 
@@ -141,8 +157,8 @@
                 <h2>Gameplay Video</h2>
                 <div class="video-container">
                     <video id="gameplay-video" controls class="large-controls">
-                        <source src="../../assets/videos/featured-video-fixed.webm" type="video/webm">
-                        <source src="../../assets/videos/featured-video.mp4" type="video/mp4">
+                        <source src="../../assets/videos/tetris-gameplay.webm" type="video/webm">
+                        <source src="../../assets/videos/tetris-gameplay.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -157,7 +173,7 @@
                     All of the game files are on GitHub, including a downloadable build that you can try out if you'd like!
                 </p>
                 <div id="github-button">
-                    <a href="https://github.com/JFaria-1205/Django_Project" target="_blank">View on<br>GitHub</a>
+                    <a href="https://github.com/JFaria-1205/Tetris2D" target="_blank">View on<br>GitHub</a>
                 </div>                
             </div>
 
