@@ -1,6 +1,7 @@
-#starter {
+#education-starter {
     font-size: 2.5rem;
     font-weight: 400;
+    padding-bottom: 0;
 }
 
 #content {
@@ -19,6 +20,20 @@
 
 #content-col2 {
     width: 75%;
+}
+
+#education-column {
+    display: grid;
+    width: 100%;
+    justify-self: center;
+    justify-items: center;
+    grid-template-columns: 50% 50%;
+    padding: 0 20%;
+}
+
+.education {
+    width: 100%;
+    font-size: 1.25rem;
 }
 
 #about-img {
@@ -48,7 +63,11 @@ p {
         #0C0C0C 100%);
 }
 
-
+@media only screen and (max-width: 1400px) {
+    #education-column {
+        padding: 0 15%;
+    }
+}
 @media only screen and (max-width: 1200px) {
     #content {
         flex-direction: column;
@@ -58,6 +77,9 @@ p {
     }
     #about-img {
         width: 45%;
+    }
+    #education-column {
+        padding: 0 10%;
     }
 }
 
